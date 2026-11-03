@@ -1,4 +1,4 @@
-/* Layout Geométrica da Galeria Hexagonal */
+/* Layout da Galeria */
 .colmeia-grid {
   display: flex;
   flex-wrap: wrap;
@@ -28,10 +28,11 @@
   box-shadow: var(--shadow-hover);
 }
 
+/* Correção crucial para a imagem aparecer e preencher o bloco */
 .hex-bg {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Faz a imagem cobrir o espaço sem distorcer */
+  object-fit: cover;
   display: block;
 }
 
