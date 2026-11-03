@@ -5,73 +5,61 @@ const lightboxLegenda = document.getElementById('lightbox-legenda');
 const lightboxPlaceholder = document.getElementById('lightbox-img-placeholder');
 const lightboxFechar = document.querySelector('.lightbox-fechar');
 
-// Cria ou ajusta a tag <img> dentro do lightbox para exibir a foto real
+// Cria ou substitui o placeholder pela tag de imagem real no modal
 let lightboxImg = document.getElementById('lightbox-img');
 if (!lightboxImg && lightboxPlaceholder) {
   lightboxImg = document.createElement('img');
   lightboxImg.id = 'lightbox-img';
-  // Estilização da imagem expandida (tamanho máximo, bordas e centralizada)
   lightboxImg.style.cssText = 'max-width: 90vw; max-height: 80vh; border-radius: 8px; object-fit: contain; display: block; margin: 0 auto; box-shadow: 0 10px 25px rgba(0,0,0,0.5);';
   lightboxPlaceholder.replaceWith(lightboxImg);
 }
 
 hexes.forEach(hex => {
-  function abrirLightbox() {
+  hex.addEventListener('click', () => {
     const imgOriginal = hex.querySelector('img');
-    const overlayText = hex.querySelector('.overlay span');
-    const texto = overlayText ? overlayText.textContent : 'Imagem ampliada';
-
-    // Joga a imagem e a legenda corretas para dentro do modal
+    const text = hex.querySelector('.overlay span').textContent;
+    
+    // Pega o caminho (src) da imagem clicada e envia para o lightbox
     if (imgOriginal && lightboxImg) {
       lightboxImg.src = imgOriginal.src;
-      lightboxImg.alt = imgOriginal.alt || texto;
+      lightboxImg.alt = imgOriginal.alt || text;
     }
 
-    if (lightboxLegenda) {
-      lightboxLegenda.textContent = texto;
-    }
-
+    lightboxLegenda.textContent = text;
     lightbox.classList.add('is-active');
     lightbox.setAttribute('aria-hidden', 'false');
-  }
-
-  // Evento de clique no hexágono
-  hex.addEventListener('click', abrirLightbox);
-
-  // Acessibilidade: abrir ao pressionar Enter ou Espaço
-  hex.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      abrirLightbox();
-    }
   });
 });
 
-// Fechar no botão X
 if (lightboxFechar) {
-  lightboxFechar.addEventListener('click', fecharLightbox);
+  lightboxFechar.addEventListener('click', () => {
+    lightbox.classList.remove('is-active');
+    lightbox.setAttribute('aria-hidden', 'true');
+    if (lightboxImg) {
+      lightboxImg.src = ''; // Limpa a imagem ao fechar
+    }
+  });
 }
 
-// Fechar ao clicar fora da imagem (no fundo escuro)
+// Fechar ao clicar fora da imagem (no fundo escuro do modal)
 if (lightbox) {
   lightbox.addEventListener('click', (e) => {
     if (e.target === lightbox) {
-      fecharLightbox();
+      lightbox.classList.remove('is-active');
+      lightbox.setAttribute('aria-hidden', 'true');
+      if (lightboxImg) {
+        lightboxImg.src = '';
+      }
     }
   });
 }
 
-// Fechar ao pressionar a tecla ESC
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && lightbox && lightbox.classList.contains('is-active')) {
-    fecharLightbox();
+  if (e.key === 'Escape' && lightbox.classList.contains('is-active')) {
+    lightbox.classList.remove('is-active');
+    lightbox.setAttribute('aria-hidden', 'true');
+    if (lightboxImg) {
+      lightboxImg.src = '';
+    }
   }
 });
-
-function fecharLightbox() {
-  lightbox.classList.remove('is-active');
-  lightbox.setAttribute('aria-hidden', 'true');
-  if (lightboxImg) {
-    lightboxImg.src = ''; // Limpa a imagem ao fechar
-  }
-}
