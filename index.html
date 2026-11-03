@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Início | Projeto EcoInclusão</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- Barra de Acessibilidade -->
+  <div class="accessibility-bar" role="region" aria-label="Acessibilidade">
+    <div class="accessibility-container">
+      <div class="access-controls">
+        <span>Acessibilidade:</span>
+        <button class="access-btn" id="btn-dark-mode" onclick="toggleDarkMode()">🌙 Modo Escuro</button>
+        <button class="access-btn" onclick="toggleContrast()">Alto Contraste</button>
+        <button class="access-btn" onclick="adjustFontSize(1)">A+</button>
+        <button class="access-btn" onclick="adjustFontSize(-1)">A-</button>
+        <button class="access-btn" onclick="resetFontSize()">A</button>
+      </div>
+      <a href="acessibilidade.html" style="color:#fff; font-weight:600;">Declaração de Acessibilidade</a>
+    </div>
+  </div>
+
+  <header class="site-header" role="banner">
+    <div class="header-container">
+      <a href="index.html" class="logo">Eco<span>Inclusão</span></a>
+      <button class="menu-toggle" id="menu-btn" aria-expanded="false">&#9776; Menu</button>
+      <nav id="main-nav" role="navigation">
+        <ul>
+          <li><a href="index.html" class="ativo" aria-current="page">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="impacto.html">Impacto</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="noticiais.html">Notícias</a></li>
+          <li><a href="midia.html">Mídia</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="acessibilidade.html">Acessibilidade</a></li>
+          <li><a href="orcamento_hospedagem.html">Hospedagem</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container" role="main">
+    <section class="hero">
+      <h1>Tecnologias Limpas &amp; Inclusão Social Digital</h1>
+      <p>Unimos a logística reversa do lixo eletrônico à capacitação técnica para Pessoas com Deficiência (PCD) e jovens em situação de vulnerabilidade.</p>
+      <a href="projetos.html" class="btn btn-primary">Conheça Nossos Projetos</a>
+    </section>
+
+    <section class="grid grid-3" style="margin-bottom: 2.5rem;">
+      <article class="card">
+        <span class="card-tag">Sustentabilidade</span>
+        <h3>Logística Reversa de E-Waste</h3>
+        <p>Recolhemos computadores e periféricos obsoletos para descarte seguro e reciclagem técnica limpa.</p>
+        <a href="impacto.html" class="btn btn-secondary" style="margin-top:auto;">Ver Impacto</a>
+      </article>
+
+      <article class="card">
+        <span class="card-tag">Inclusão PCD</span>
+        <h3>Capacitação Técnica e Digital</h3>
+        <p>Oficinas presenciais e híbridas para formação de jovens em manutenção de computadores e lógica de programação.</p>
+        <a href="projetos.html" class="btn btn-secondary" style="margin-top:auto;">Nossas Metas</a>
+      </article>
+
+      <article class="card">
+        <span class="card-tag">Transparência</span>
+        <h3>Prestação Pública de Contas</h3>
+        <p>Demonstrativos abertos de custos de hospedagem, servidores ecológicos e destinação social dos recursos.</p>
+        <a href="orcamento_hospedagem.html" class="btn btn-secondary" style="margin-top:auto;">Hospedagem Verde</a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>EcoInclusão</h3>
+        <p>Tecnologias limpas para o desenvolvimento social sustentável.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Acesso Rápido</h4>
+        <ul>
+          <li><a href="sobre.html">Sobre Nós</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="acessibilidade.html">Acessibilidade</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Projeto EcoInclusão. Todos os direitos reservados. WCAG 2.1 AA.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

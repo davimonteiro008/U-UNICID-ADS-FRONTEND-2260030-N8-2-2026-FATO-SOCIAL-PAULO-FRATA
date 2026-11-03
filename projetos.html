@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projetos | Projeto EcoInclusão</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <div class="accessibility-bar" role="region" aria-label="Acessibilidade">
+    <div class="accessibility-container">
+      <div class="access-controls">
+        <span>Acessibilidade:</span>
+        <button class="access-btn" id="btn-dark-mode" onclick="toggleDarkMode()">🌙 Modo Escuro</button>
+        <button class="access-btn" onclick="toggleContrast()">Alto Contraste</button>
+        <button class="access-btn" onclick="adjustFontSize(1)">A+</button>
+        <button class="access-btn" onclick="adjustFontSize(-1)">A-</button>
+        <button class="access-btn" onclick="resetFontSize()">A</button>
+      </div>
+      <a href="acessibilidade.html" style="color:#fff; font-weight:600;">Declaração de Acessibilidade</a>
+    </div>
+  </div>
+
+  <header class="site-header" role="banner">
+    <div class="header-container">
+      <a href="index.html" class="logo">Eco<span>Inclusão</span></a>
+      <button class="menu-toggle" id="menu-btn" aria-expanded="false">&#9776; Menu</button>
+      <nav id="main-nav" role="navigation">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="projetos.html" class="ativo" aria-current="page">Projetos</a></li>
+          <li><a href="impacto.html">Impacto</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="noticiais.html">Notícias</a></li>
+          <li><a href="midia.html">Mídia</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="acessibilidade.html">Acessibilidade</a></li>
+          <li><a href="orcamento_hospedagem.html">Hospedagem</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container" role="main">
+    <section class="hero">
+      <h1>Iniciativas e Metas de Impacto</h1>
+      <p>Ações contínuas de reuso tecnológico, oficinas inclusivas e acompanhamento de metas socioambientais.</p>
+    </section>
+
+    <section style="margin-bottom: 3rem;">
+      <h2>Nossos Projetos Ativos</h2>
+      <div class="grid grid-2">
+        <article class="card">
+          <span class="card-tag">Reciclagem Técnica</span>
+          <h3>Recuperação de Hardware &amp; Doação</h3>
+          <p>Coleta de eletrônicos obsoletos ou danificados, triagem especializada e recondicionamento de computadores para doação a laboratórios comunitários.</p>
+          <a href="contato.html" class="btn btn-primary" style="margin-top:auto;">Apoiar Iniciativa</a>
+        </article>
+
+        <article class="card">
+          <span class="card-tag">Capacitação PCD</span>
+          <h3>Oficinas de Manutenção Inclusiva</h3>
+          <p>Cursos de manutenção de hardware e lógica de programação adaptados para jovens com deficiência, promovendo autonomia profissional.</p>
+          <a href="contato.html" class="btn btn-primary" style="margin-top:auto;">Inscrever-se</a>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Cronograma e Metas de Impacto</h2>
+      <p>Acompanhe nosso plano de metas quantitativas para o projeto EcoInclusão:</p>
+
+      <div class="table-container">
+        <table aria-label="Tabela de Metas e Indicadores dos Projetos">
+          <thead>
+            <tr>
+              <th scope="col">Período / Código</th>
+              <th scope="col">Meta de Arrecadação / Equipamentos</th>
+              <th scope="col">Status da Ação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>2026-Q1 (Cod: 1230)</strong></td>
+              <td>Recolher e triar 1.200 unidades de e-waste (Cod: 4560)</td>
+              <td><span style="color: var(--secondary-color); font-weight: bold;">Em Andamento</span></td>
+            </tr>
+            <tr>
+              <td><strong>2026-Q2</strong></td>
+              <td>Capacitar 80 alunos PCDs em oficinas técnicas</td>
+              <td><span style="color: var(--accent-color); font-weight: bold;">Planejado</span></td>
+            </tr>
+            <tr>
+              <td><strong>2026-Q3</strong></td>
+              <td>Montar 5 novos laboratórios de inclusão digital</td>
+              <td><span style="color: var(--accent-color); font-weight: bold;">Planejado</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>EcoInclusão</h3>
+        <p>Tecnologias limpas e acessíveis para o desenvolvimento social sustentável.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Links Rápidos</h4>
+        <ul>
+          <li><a href="sobre.html">Sobre Nós</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="orcamento_hospedagem.html">Prestação de Contas</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Projeto EcoInclusão. Todos os direitos reservados. WCAG 2.1 AA.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

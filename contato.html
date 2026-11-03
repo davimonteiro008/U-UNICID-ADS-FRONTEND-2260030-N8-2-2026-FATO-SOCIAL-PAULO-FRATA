@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato | Projeto EcoInclusão</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contato.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <div class="accessibility-bar" role="region" aria-label="Acessibilidade">
+    <div class="accessibility-container">
+      <div class="access-controls">
+        <span>Acessibilidade:</span>
+        <button class="access-btn" id="btn-dark-mode" onclick="toggleDarkMode()">🌙 Modo Escuro</button>
+        <button class="access-btn" onclick="toggleContrast()">Alto Contraste</button>
+        <button class="access-btn" onclick="adjustFontSize(1)">A+</button>
+        <button class="access-btn" onclick="adjustFontSize(-1)">A-</button>
+        <button class="access-btn" onclick="resetFontSize()">A</button>
+      </div>
+      <a href="acessibilidade.html" style="color:#fff; font-weight:600;">Declaração de Acessibilidade</a>
+    </div>
+  </div>
+
+  <header class="site-header" role="banner">
+    <div class="header-container">
+      <a href="index.html" class="logo">Eco<span>Inclusão</span></a>
+      <button class="menu-toggle" id="menu-btn" aria-expanded="false">&#9776; Menu</button>
+      <nav id="main-nav" role="navigation">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="impacto.html">Impacto</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="noticiais.html">Notícias</a></li>
+          <li><a href="midia.html">Mídia</a></li>
+          <li><a href="contato.html" class="ativo" aria-current="page">Contato</a></li>
+          <li><a href="acessibilidade.html">Acessibilidade</a></li>
+          <li><a href="orcamento_hospedagem.html">Hospedagem</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container" role="main">
+    <section class="hero">
+      <h1>Entre em Contato Conosco</h1>
+      <p>Envie dúvidas, propostas de doação de hardware ou solicite atendimento institucional.</p>
+    </section>
+
+    <div class="grid grid-2">
+      <section class="card">
+        <h2>Formulário de Atendimento</h2>
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="Nome">Nome <span style="color:red;">*</span></label>
+            <input type="text" id="Nome" name="nome" required placeholder="Digite seu nome">
+          </div>
+
+          <div class="form-group">
+            <label for="Sobrenome">Sobrenome <span style="color:red;">*</span></label>
+            <input type="text" id="Sobrenome" name="sobrenome" required placeholder="Digite seu sobrenome">
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail <span style="color:red;">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com">
+          </div>
+
+          <div class="form-group" style="display: flex; gap: 0.5rem; align-items: center;">
+            <input type="checkbox" id="atualizacoes" name="atualizacoes" style="width: auto;">
+            <label for="atualizacoes" style="margin-bottom: 0; font-weight: normal;">Deseja receber atualizações por e-mail?</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Mensagem</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Atendimento Institucional</h2>
+        <p><strong>E-mail Direto:</strong> contato@ecoinclusao.org</p>
+        <p><strong>Telefone:</strong> (11) 3456-7890</p>
+        <p><strong>Endereço:</strong> Av. Paulista, 1000 - Bela Vista, São Paulo - SP</p>
+        <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(0,0,0,0.03); border-radius: 6px; border: 1px solid var(--border-color);">
+          <h3>Agradecemos o suporte!</h3>
+          <p style="margin-bottom: 0; font-size: 0.9rem;">Sua participação fortalece nossas ações socioambientais.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>EcoInclusão</h3>
+        <p>&copy; 2026 Projeto EcoInclusão. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

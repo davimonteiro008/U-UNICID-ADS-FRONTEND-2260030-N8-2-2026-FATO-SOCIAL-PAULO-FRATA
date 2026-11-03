@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orçamento de Hospedagem | Projeto EcoInclusão</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <div class="accessibility-bar" role="region" aria-label="Acessibilidade">
+    <div class="accessibility-container">
+      <div class="access-controls">
+        <span>Acessibilidade:</span>
+        <button class="access-btn" id="btn-dark-mode" onclick="toggleDarkMode()">🌙 Modo Escuro</button>
+        <button class="access-btn" onclick="toggleContrast()">Alto Contraste</button>
+        <button class="access-btn" onclick="adjustFontSize(1)">A+</button>
+        <button class="access-btn" onclick="adjustFontSize(-1)">A-</button>
+        <button class="access-btn" onclick="resetFontSize()">A</button>
+      </div>
+      <a href="acessibilidade.html" style="color:#fff; font-weight:600;">Declaração de Acessibilidade</a>
+    </div>
+  </div>
+
+  <header class="site-header" role="banner">
+    <div class="header-container">
+      <a href="index.html" class="logo">Eco<span>Inclusão</span></a>
+      <button class="menu-toggle" id="menu-btn" aria-expanded="false">&#9776; Menu</button>
+      <nav id="main-nav" role="navigation">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="impacto.html">Impacto</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="noticiais.html">Notícias</a></li>
+          <li><a href="midia.html">Mídia</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="acessibilidade.html">Acessibilidade</a></li>
+          <li><a href="orcamento_hospedagem.html" class="ativo" aria-current="page">Hospedagem</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container" role="main">
+    <section class="hero">
+      <h1>Relatório Comparativo de Hospedagem &amp; Domínio</h1>
+      <p>Estudo de viabilidade técnica e financeira para publicação do portal em servidores com energia renovável (Green Hosting).</p>
+    </section>
+
+    <section style="margin-bottom: 2.5rem;">
+      <h2>1. Comparativo de Provedores de Hospedagem Verde</h2>
+      <div class="table-container">
+        <table aria-label="Comparativo de provedores de hospedagem verde">
+          <thead>
+            <tr>
+              <th scope="col">Provedor</th>
+              <th scope="col">Recursos Inclusos</th>
+              <th scope="col">Energia Renovável / Sustentabilidade</th>
+              <th scope="col">Custo Mensal (R$)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>GreenGeeks</strong></td>
+              <td>Espaço ilimitado, SSL Grátis, 1 Domínio</td>
+              <td>300% de energia eólica compensada</td>
+              <td>R$ 19,90/mês</td>
+            </tr>
+            <tr>
+              <td><strong>Hostinger Eco</strong></td>
+              <td>100 GB SSD, SSL Grátis, 100 E-mails</td>
+              <td>Datacenters com neutralidade de carbono</td>
+              <td>R$ 14,99/mês</td>
+            </tr>
+            <tr>
+              <td><strong>Locaweb</strong></td>
+              <td>Unlimited Storage, SSL Grátis, Suporte PT-BR</td>
+              <td>Compensação de emissões locais</td>
+              <td>R$ 24,90/mês</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section style="margin-bottom: 2.5rem;">
+      <h2>2. Comparativo de Registradores de Domínio</h2>
+      <div class="table-container">
+        <table aria-label="Comparativo de registradores de domínio para ONGs">
+          <thead>
+            <tr>
+              <th scope="col">Registrador</th>
+              <th scope="col">Extensão (.TLD)</th>
+              <th scope="col">Proteção WHOIS</th>
+              <th scope="col">Custo Anual (R$)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Registro.br</strong></td>
+              <td>.org.br / .com.br</td>
+              <td>Incluso nativamente</td>
+              <td>R$ 40,00/ano</td>
+            </tr>
+            <tr>
+              <td><strong>Hostinger Domínios</strong></td>
+              <td>.org.br</td>
+              <td>Grátis no 1º ano</td>
+              <td>R$ 49,99/ano</td>
+            </tr>
+            <tr>
+              <td><strong>GoDaddy</strong></td>
+              <td>.com.br</td>
+              <td>Pago à parte</td>
+              <td>R$ 59,90/ano</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>3. Justificativa Técnica da Escolha</h2>
+      <p>Recomendamos a combinação do provedor <strong>Hostinger Eco</strong> com o registro direto no <strong>Registro.br</strong>. Esta solução oferece o melhor custo-benefício financeiro (custo total aproximado de R$ 220,00/ano), atende integralmente aos critérios de sustentabilidade (servidores neutros em carbono) e garante acessibilidade e suporte técnico nacional para a equipe.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>EcoInclusão</h3>
+        <p>Transparência em infraestrutura digital e orçamentos.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Projeto EcoInclusão. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

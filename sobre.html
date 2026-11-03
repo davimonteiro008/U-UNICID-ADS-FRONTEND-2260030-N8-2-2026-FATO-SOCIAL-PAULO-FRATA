@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nós | Projeto EcoInclusão</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <div class="accessibility-bar" role="region" aria-label="Acessibilidade">
+    <div class="accessibility-container">
+      <div class="access-controls">
+        <span>Acessibilidade:</span>
+        <button class="access-btn" id="btn-dark-mode" onclick="toggleDarkMode()">🌙 Modo Escuro</button>
+        <button class="access-btn" onclick="toggleContrast()">Alto Contraste</button>
+        <button class="access-btn" onclick="adjustFontSize(1)">A+</button>
+        <button class="access-btn" onclick="adjustFontSize(-1)">A-</button>
+        <button class="access-btn" onclick="resetFontSize()">A</button>
+      </div>
+      <a href="acessibilidade.html" style="color:#fff; font-weight:600;">Declaração de Acessibilidade</a>
+    </div>
+  </div>
+
+  <header class="site-header" role="banner">
+    <div class="header-container">
+      <a href="index.html" class="logo">Eco<span>Inclusão</span></a>
+      <button class="menu-toggle" id="menu-btn" aria-expanded="false">&#9776; Menu</button>
+      <nav id="main-nav" role="navigation">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html" class="ativo" aria-current="page">Sobre</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="impacto.html">Impacto</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="noticiais.html">Notícias</a></li>
+          <li><a href="midia.html">Mídia</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="acessibilidade.html">Acessibilidade</a></li>
+          <li><a href="orcamento_hospedagem.html">Hospedagem</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container" role="main">
+    <section class="hero">
+      <h1>Sobre o Projeto EcoInclusão</h1>
+      <p>Unindo preservação ambiental, logística reversa de eletrônicos e inclusão social para gerar transformação real.</p>
+    </section>
+
+    <section style="margin-bottom: 2.5rem;">
+      <h2>Nossa História e Propósito</h2>
+      <p>O Projeto EcoInclusão, desenvolvido pela equipe FatoSocial, atua na interseção entre a sustentabilidade ambiental e o desenvolvimento humano. Nosso foco é combater o descarte inadequado de resíduos tecnológicos (e-waste) promovendo a inclusão digital de comunidades vulneráveis e Pessoas com Deficiência (PCD).</p>
+    </section>
+
+    <section style="margin-bottom: 2.5rem;">
+      <h2>Nossos Pilares Institucionais</h2>
+      <div class="grid grid-3">
+        <article class="card">
+          <span class="card-tag">Propósito</span>
+          <h3>Missão</h3>
+          <p>Promover a sustentabilidade por meio do reuso de componentes eletrônicos e da capacitação técnica inclusiva para Pessoas com Deficiência e jovens em situação de vulnerabilidade.</p>
+        </article>
+
+        <article class="card">
+          <span class="card-tag">Futuro</span>
+          <h3>Visão</h3>
+          <p>Ser referência nacional em transformação socioambiental digital, demonstrando como a tecnologia pode ser reaproveitada de forma ecológica, ética e 100% acessível.</p>
+        </article>
+
+        <article class="card">
+          <span class="card-tag">Princípios</span>
+          <h3>Valores</h3>
+          <ul style="padding-left: 1.2rem;">
+            <li><strong>Sustentabilidade:</strong> Redução efetiva do lixo eletrônico.</li>
+            <li><strong>Inclusão:</strong> Acesso digital universal para PCDs.</li>
+            <li><strong>Transparência:</strong> Governança aberta e prestação pública de contas.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>EcoInclusão</h3>
+        <p>Tecnologias limpas e acessíveis para o desenvolvimento social sustentável.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Projeto EcoInclusão. Todos os direitos reservados. Conformidade WCAG 2.1 AA.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

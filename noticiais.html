@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notícias &amp; Artigos | Projeto EcoInclusão</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="noticiais.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <div class="accessibility-bar" role="region" aria-label="Acessibilidade">
+    <div class="accessibility-container">
+      <div class="access-controls">
+        <span>Acessibilidade:</span>
+        <button class="access-btn" id="btn-dark-mode" onclick="toggleDarkMode()">🌙 Modo Escuro</button>
+        <button class="access-btn" onclick="toggleContrast()">Alto Contraste</button>
+        <button class="access-btn" onclick="adjustFontSize(1)">A+</button>
+        <button class="access-btn" onclick="adjustFontSize(-1)">A-</button>
+        <button class="access-btn" onclick="resetFontSize()">A</button>
+      </div>
+      <a href="acessibilidade.html" style="color:#fff; font-weight:600;">Declaração de Acessibilidade</a>
+    </div>
+  </div>
+
+  <header class="site-header" role="banner">
+    <div class="header-container">
+      <a href="index.html" class="logo">Eco<span>Inclusão</span></a>
+      <button class="menu-toggle" id="menu-btn" aria-expanded="false">&#9776; Menu</button>
+      <nav id="main-nav" role="navigation">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="impacto.html">Impacto</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="noticiais.html" class="ativo" aria-current="page">Notícias</a></li>
+          <li><a href="midia.html">Mídia</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="acessibilidade.html">Acessibilidade</a></li>
+          <li><a href="orcamento_hospedagem.html">Hospedagem</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container" role="main">
+    <section class="hero">
+      <h1>Notícias e Publicações de Impacto</h1>
+      <p>Relatórios socioambientais, artigos de inovação e boletins informativos do EcoInclusão.</p>
+    </section>
+
+    <!-- Bento Grid de Notícias -->
+    <section class="bento-grid-news" style="margin-bottom: 3rem;">
+      <article class="card card-destaque">
+        <span class="card-tag">Educação Ambiental</span>
+        <h2>Compreendendo o Equilíbrio dos Ecossistemas Locais</h2>
+        <p>Entender a interdependência entre os seres vivos e o meio ambiente é o alicerce estrutural para erguer soluções de conservação eficientes. Nossa ONG capacita indivíduos para atuar na proteção da biodiversidade nativa.</p>
+      </article>
+
+      <div class="grid grid-2" style="margin-top: 1.5rem;">
+        <article class="card">
+          <span class="card-tag">Preservação Hídrica</span>
+          <h3>Conservação de Recursos Subaquáticos</h3>
+          <p>Rios limpos garantem a manutenção da vida. Discutimos métodos eficientes para conter o descarte de lixo eletrônico em bacias hidrográficas urbanas.</p>
+        </article>
+
+        <article class="card">
+          <span class="card-tag">Mapeamento Digital</span>
+          <h3>Monitoramento de Áreas Verdes</h3>
+          <p>Utilizando tecnologia inclusiva e mapeamento geográfico, analisamos o avanço da recuperação vegetal em biomas vulneráveis estratégicos.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Seção de Newsletter Premium -->
+    <section class="card" style="background-color: var(--primary-color); color: #FFF;">
+      <h2 style="color: #FFF;">Receba Notícias em Primeira Mão</h2>
+      <p style="opacity: 0.9; color:#E2E8F0;">Inscreva-se na nossa lista oficial para obter relatórios ecológicos e dados de impacto mensais.</p>
+
+      <form id="newsletter-form" style="margin-top: 1.5rem;">
+        <div class="form-group">
+          <label for="email-news" style="color: #FFF;">Seu E-mail Preferencial <span style="color: #F87171;">*</span></label>
+          <input type="email" id="email-news" required placeholder="seuemail@exemplo.com" style="padding: 0.75rem; width: 100%; border-radius: 6px; border: none;">
+        </div>
+
+        <div style="display: flex; gap: 0.5rem; align-items: flex-start; margin-bottom: 1rem;">
+          <input type="checkbox" id="confirmacao" required style="margin-top: 0.25rem;">
+          <label for="confirmacao" style="font-size: 0.85rem; color: #E5E7EB; font-weight: normal;">
+            Permito que o Projeto EcoInclusão envie e-mails informativos diretos de acordo com os termos de privacidade.
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Inscrever-se Agora</button>
+      </form>
+
+      <div id="newsletter-msg" style="display: none; margin-top: 1rem; padding: 1rem; background: rgba(255,255,255,0.2); border-radius: 6px;">
+        <p style="margin: 0; font-weight: bold;">✓ Agradecemos o suporte! Inscrição registrada com sucesso.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>EcoInclusão</h3>
+        <p>Informativo socioambiental e boletins institucionais.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Projeto EcoInclusão. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="noticiais.js"></script>
+</body>
+</html>

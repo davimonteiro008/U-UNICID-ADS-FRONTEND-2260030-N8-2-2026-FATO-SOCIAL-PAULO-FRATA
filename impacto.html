@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impacto Ambiental | Projeto EcoInclusão</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="impacto.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <div class="accessibility-bar" role="region" aria-label="Acessibilidade">
+    <div class="accessibility-container">
+      <div class="access-controls">
+        <span>Acessibilidade:</span>
+        <button class="access-btn" id="btn-dark-mode" onclick="toggleDarkMode()">🌙 Modo Escuro</button>
+        <button class="access-btn" onclick="toggleContrast()">Alto Contraste</button>
+        <button class="access-btn" onclick="adjustFontSize(1)">A+</button>
+        <button class="access-btn" onclick="adjustFontSize(-1)">A-</button>
+        <button class="access-btn" onclick="resetFontSize()">A</button>
+      </div>
+      <a href="acessibilidade.html" style="color:#fff; font-weight:600;">Declaração de Acessibilidade</a>
+    </div>
+  </div>
+
+  <header class="site-header" role="banner">
+    <div class="header-container">
+      <a href="index.html" class="logo">Eco<span>Inclusão</span></a>
+      <button class="menu-toggle" id="menu-btn" aria-expanded="false">&#9776; Menu</button>
+      <nav id="main-nav" role="navigation">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="impacto.html" class="ativo" aria-current="page">Impacto</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="noticiais.html">Notícias</a></li>
+          <li><a href="midia.html">Mídia</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="acessibilidade.html">Acessibilidade</a></li>
+          <li><a href="orcamento_hospedagem.html">Hospedagem</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container" role="main">
+    <section class="hero">
+      <h1>Métricas de Impacto &amp; Calculadora Ecológica</h1>
+      <p>Transformando resíduos em futuro sustentável através da reciclagem de e-waste e inclusão digital.</p>
+    </section>
+
+    <!-- Métricas -->
+    <section style="margin-bottom: 3rem;">
+      <div class="grid grid-2">
+        <div class="card" style="text-align: center;">
+          <h2 style="font-size: 2.5rem; color: var(--accent-color);">450+ Toneladas</h2>
+          <p><strong>Lixo Eletrônico Coletado:</strong> Desviado dos aterros sanitários e destinado para reciclagem limpa.</p>
+        </div>
+
+        <div class="card" style="text-align: center;">
+          <h2 style="font-size: 2.5rem; color: var(--secondary-color);">1.200t CO₂</h2>
+          <p><strong>Emissões Evitadas:</strong> Equivalente ao plantio de mais de 8.000 árvores adultas ao ano.</p>
+        </div>
+
+        <div class="card" style="text-align: center;">
+          <h2 style="font-size: 2.5rem; color: var(--primary-color);">85% Inclusão</h2>
+          <p><strong>Reaproveitamento Social:</strong> Dispositivos recuperados e doados para famílias vulneráveis.</p>
+        </div>
+
+        <div class="card" style="text-align: center;">
+          <h2 style="font-size: 2.5rem; color: var(--accent-color);">100% Rastreável</h2>
+          <p><strong>Transparência Total:</strong> Garantia de descarte ecológico sem contaminação do solo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calculadora Interativa -->
+    <section class="card" style="background: var(--bg-card); border: 2px solid var(--primary-color);">
+      <h2>Calculadora de Impacto Ambiental</h2>
+      <p>Calcule a economia estimada de recursos ao doar seus eletrônicos para o EcoInclusão:</p>
+
+      <div class="calc-box" style="margin-top: 1.5rem;">
+        <label for="ewaste-input" style="font-weight: bold; display: block; margin-bottom: 0.5rem;">
+          Quantidade de Dispositivos (Smartphones / Laptops):
+        </label>
+        <input type="range" id="ewaste-input" min="1" max="100" value="10" style="width: 100%; height: 8px; margin-bottom: 1rem; accent-color: var(--secondary-color); cursor: pointer;">
+        
+        <p style="font-size: 1.2rem;"><strong>Dispositivos Selecionados:</strong> <span id="devices-count" style="color: var(--accent-color); font-weight: bold;">10</span> unidades</p>
+
+        <div class="grid grid-3" style="margin-top: 1.5rem; text-align: center;">
+          <div style="padding: 1rem; background: rgba(0,0,0,0.03); border-radius: 6px; border: 1px solid var(--border-color);">
+            <p style="font-size: 0.9rem; color: var(--text-muted);">CO₂ Evitado</p>
+            <h3 id="co2-result" style="font-size: 1.8rem; color: var(--primary-color);">120 kg</h3>
+          </div>
+
+          <div style="padding: 1rem; background: rgba(0,0,0,0.03); border-radius: 6px; border: 1px solid var(--border-color);">
+            <p style="font-size: 0.9rem; color: var(--text-muted);">Água Preservada</p>
+            <h3 id="water-result" style="font-size: 1.8rem; color: var(--secondary-color);">1.500 L</h3>
+          </div>
+
+          <div style="padding: 1rem; background: rgba(0,0,0,0.03); border-radius: 6px; border: 1px solid var(--border-color);">
+            <p style="font-size: 0.9rem; color: var(--text-muted);">Energia Poupada</p>
+            <h3 id="energy-result" style="font-size: 1.8rem; color: var(--accent-color);">450 kWh</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>EcoInclusão</h3>
+        <p>Desenvolvimento sustentável e acessibilidade para todos.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Transparência</h4>
+        <ul>
+          <li><a href="impacto.html">Calculadora Ecológica</a></li>
+          <li><a href="orcamento_hospedagem.html">Relatório Financeiro</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Projeto EcoInclusão. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="impacto.js"></script>
+</body>
+</html>

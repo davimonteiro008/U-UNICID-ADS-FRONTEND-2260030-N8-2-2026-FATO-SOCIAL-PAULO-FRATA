@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mídia e Imprensa | Projeto EcoInclusão</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <div class="accessibility-bar" role="region" aria-label="Acessibilidade">
+    <div class="accessibility-container">
+      <div class="access-controls">
+        <span>Acessibilidade:</span>
+        <button class="access-btn" id="btn-dark-mode" onclick="toggleDarkMode()">🌙 Modo Escuro</button>
+        <button class="access-btn" onclick="toggleContrast()">Alto Contraste</button>
+        <button class="access-btn" onclick="adjustFontSize(1)">A+</button>
+        <button class="access-btn" onclick="adjustFontSize(-1)">A-</button>
+        <button class="access-btn" onclick="resetFontSize()">A</button>
+      </div>
+      <a href="acessibilidade.html" style="color:#fff; font-weight:600;">Declaração de Acessibilidade</a>
+    </div>
+  </div>
+
+  <header class="site-header" role="banner">
+    <div class="header-container">
+      <a href="index.html" class="logo">Eco<span>Inclusão</span></a>
+      <button class="menu-toggle" id="menu-btn" aria-expanded="false">&#9776; Menu</button>
+      <nav id="main-nav" role="navigation">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="impacto.html">Impacto</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="noticiais.html">Notícias</a></li>
+          <li><a href="midia.html" class="ativo" aria-current="page">Mídia</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="acessibilidade.html">Acessibilidade</a></li>
+          <li><a href="orcamento_hospedagem.html">Hospedagem</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container" role="main">
+    <section class="hero">
+      <h1>Sala de Imprensa e Recursos de Mídia</h1>
+      <p>Releases institucionais, logotipos oficiais e contatos para comunicadores e jornalistas.</p>
+    </section>
+
+    <section style="margin-bottom: 2.5rem;">
+      <h2>Releases Oficiais</h2>
+      <div class="grid grid-2">
+        <article class="card">
+          <span class="card-tag">Release #01/2026</span>
+          <h3>Projeto EcoInclusão Ultrapassa 450 Toneladas de E-Waste Recicladas</h3>
+          <p>Relatório de impacto destaca ampliação de polos comunitários de coleta e oficinas técnicas inclusivas.</p>
+          <a href="#" class="btn btn-secondary" style="margin-top:auto;">Ler Release Completo</a>
+        </article>
+
+        <article class="card">
+          <span class="card-tag">Release #02/2026</span>
+          <h3>Capacitação Digital Atinge Marca de 85% de Inserção Socioambiental</h3>
+          <p>Iniciativa foca na formação de jovens vulneráveis e Pessoas com Deficiência para o mercado tecnológico.</p>
+          <a href="#" class="btn btn-secondary" style="margin-top:auto;">Ler Release Completo</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>EcoInclusão</h3>
+        <p>Atendimento de imprensa: imprensa@ecoinclusao.org</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Projeto EcoInclusão. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

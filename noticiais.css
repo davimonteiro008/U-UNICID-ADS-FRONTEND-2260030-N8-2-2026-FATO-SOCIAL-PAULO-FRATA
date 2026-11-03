@@ -1,0 +1,4 @@
+/* Bento Grid */
+.bento-grid-news .card-destaque {
+  border-left: 5px solid var(--secondary-color);
+}
