@@ -5,7 +5,6 @@ const lightboxLegenda = document.getElementById('lightbox-legenda');
 const lightboxPlaceholder = document.getElementById('lightbox-img-placeholder');
 const lightboxFechar = document.querySelector('.lightbox-fechar');
 
-// Cria ou substitui o placeholder pela tag de imagem real no modal
 let lightboxImg = document.getElementById('lightbox-img');
 if (!lightboxImg && lightboxPlaceholder) {
   lightboxImg = document.createElement('img');
@@ -19,15 +18,16 @@ hexes.forEach(hex => {
     const imgOriginal = hex.querySelector('img');
     const text = hex.querySelector('.overlay span').textContent;
     
-    // Pega o caminho (src) da imagem clicada e envia para o lightbox
     if (imgOriginal && lightboxImg) {
       lightboxImg.src = imgOriginal.src;
       lightboxImg.alt = imgOriginal.alt || text;
     }
 
-    lightboxLegenda.textContent = text;
-    lightbox.classList.add('is-active');
-    lightbox.setAttribute('aria-hidden', 'false');
+    if (lightboxLegenda) lightboxLegenda.textContent = text;
+    if (lightbox) {
+      lightbox.classList.add('is-active');
+      lightbox.setAttribute('aria-hidden', 'false');
+    }
   });
 });
 
@@ -35,31 +35,24 @@ if (lightboxFechar) {
   lightboxFechar.addEventListener('click', () => {
     lightbox.classList.remove('is-active');
     lightbox.setAttribute('aria-hidden', 'true');
-    if (lightboxImg) {
-      lightboxImg.src = ''; // Limpa a imagem ao fechar
-    }
+    if (lightboxImg) lightboxImg.src = '';
   });
 }
 
-// Fechar ao clicar fora da imagem (no fundo escuro do modal)
 if (lightbox) {
   lightbox.addEventListener('click', (e) => {
     if (e.target === lightbox) {
       lightbox.classList.remove('is-active');
       lightbox.setAttribute('aria-hidden', 'true');
-      if (lightboxImg) {
-        lightboxImg.src = '';
-      }
+      if (lightboxImg) lightboxImg.src = '';
     }
   });
 }
 
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && lightbox.classList.contains('is-active')) {
+  if (e.key === 'Escape' && lightbox && lightbox.classList.contains('is-active')) {
     lightbox.classList.remove('is-active');
     lightbox.setAttribute('aria-hidden', 'true');
-    if (lightboxImg) {
-      lightboxImg.src = '';
-    }
+    if (lightboxImg) lightboxImg.src = '';
   }
 });
