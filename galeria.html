@@ -1,61 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galeria de Ações | Projeto EcoInclusão</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="galeria.css">
-</head>
-<body>
-  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
-
-  <div class="accessibility-bar" role="region" aria-label="Acessibilidade">
-    <div class="accessibility-container">
-      <div class="access-controls">
-        <span>Acessibilidade:</span>
-        <button class="access-btn" id="btn-dark-mode" onclick="toggleDarkMode()">🌙 Modo Escuro</button>
-        <button class="access-btn" onclick="toggleContrast()">Alto Contraste</button>
-        <button class="access-btn" onclick="adjustFontSize(1)">A+</button>
-        <button class="access-btn" onclick="adjustFontSize(-1)">A-</button>
-        <button class="access-btn" onclick="resetFontSize()">A</button>
-      </div>
-      <a href="acessibilidade.html" style="color:#fff; font-weight:600;">Declaração de Acessibilidade</a>
-    </div>
-  </div>
-
-  <header class="site-header" role="banner">
-    <div class="header-container">
-      <a href="index.html" class="logo">Eco<span>Inclusão</span></a>
-      <button class="menu-toggle" id="menu-btn" aria-expanded="false">&#9776; Menu</button>
-      <nav id="main-nav" role="navigation">
-        <ul>
-          <li><a href="index.html">Início</a></li>
-          <li><a href="sobre.html">Sobre</a></li>
-          <li><a href="projetos.html">Projetos</a></li>
-          <li><a href="impacto.html">Impacto</a></li>
-          <li><a href="galeria.html" class="ativo" aria-current="page">Galeria</a></li>
-          <li><a href="noticiais.html">Notícias</a></li>
-          <li><a href="midia.html">Mídia</a></li>
-          <li><a href="contato.html">Contato</a></li>
-          <li><a href="acessibilidade.html">Acessibilidade</a></li>
-          <li><a href="orcamento_hospedagem.html">Hospedagem</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main-content" class="container" role="main">
-    <section class="hero">
-      <h1>Galeria Fotográfica das Nossas Ações</h1>
-      <p>Acompanhe os registros de mutirões de triagem, oficinas de capacitação e pontos de coleta comunitária.</p>
-    </section>
-
-    <!-- Hexagônos de Galeria Interativa -->
-    <section class="colmeia-section">
+<section class="colmeia-section">
       <div class="colmeia-grid">
         
-        <!-- 1. Triagem -->
         <div class="hexagono-item">
           <div class="hexagono" tabindex="0" role="button" aria-label="Ampliar foto de Triagem de Eletrônicos">
             <img class="hex-bg" src="images (1).jpg" alt="Triagem de Eletrônicos">
@@ -63,7 +8,6 @@
           </div>
         </div>
 
-        <!-- 2. Capacitação -->
         <div class="hexagono-item">
           <div class="hexagono" tabindex="0" role="button" aria-label="Ampliar foto de Capacitação Técnica">
             <img class="hex-bg" src="images (2).jpg" alt="Capacitação Técnica">
@@ -71,7 +15,6 @@
           </div>
         </div>
 
-        <!-- 3. Inclusão -->
         <div class="hexagono-item">
           <div class="hexagono" tabindex="0" role="button" aria-label="Ampliar foto de Inclusão Digital">
             <img class="hex-bg" src="images (3).jpg" alt="Inclusão Digital">
@@ -79,7 +22,6 @@
           </div>
         </div>
 
-        <!-- 4. Coleta -->
         <div class="hexagono-item">
           <div class="hexagono" tabindex="0" role="button" aria-label="Ampliar foto de Ponto de Coleta">
             <img class="hex-bg" src="images (4).jpg" alt="Ponto de Coleta">
@@ -89,30 +31,3 @@
 
       </div>
     </section>
-  </main>
-
-  <!-- Lightbox Modal -->
-  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Visualizador de Imagem">
-    <button class="lightbox-fechar" aria-label="Fechar galeria">&times;</button>
-    <div class="lightbox-wrapper">
-      <div id="lightbox-img-placeholder" style="font-size: 1.5rem; color:#fff; text-align:center; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 8px;"></div>
-      <div id="lightbox-legenda" style="color: #FFF; text-align: center; margin-top: 1rem; font-weight: bold; font-size: 1.2rem;"></div>
-    </div>
-  </div>
-
-  <footer class="site-footer" role="contentinfo">
-    <div class="footer-container">
-      <div class="footer-col">
-        <h3>EcoInclusão</h3>
-        <p>Galeria de registros e transparência em campo.</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Projeto EcoInclusão. Todos os direitos reservados.</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-  <script src="galeria.js"></script>
-</body>
-</html>
