@@ -1,57 +1,94 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria - Projeto EcoInclusão</title>
-    <!-- Altere para "style.css" caso utilize o arquivo unificado de estilos -->
-    <link rel="stylesheet" href="galeria.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria de Ações | Projeto EcoInclusão</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="galeria.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
 
-    <main>
-        <section class="colmeia-section">
-            <div class="colmeia-grid">
-                
-                <div class="hexagono-item">
-                    <div class="hexagono" tabindex="0" role="button" aria-label="Ampliar foto de Triagem de Eletrônicos">
-                        <img class="hex-bg" src="img/triagem.jpg" alt="Triagem de Eletrônicos">
-                        <div class="overlay"><span>Triagem de Eletrônicos</span></div>
-                    </div>
-                </div>
-
-                <div class="hexagono-item">
-                    <div class="hexagono" tabindex="0" role="button" aria-label="Ampliar foto de Capacitação Técnica">
-                        <img class="hex-bg" src="img/capacitacao.jpg" alt="Capacitação Técnica">
-                        <div class="overlay"><span>Capacitação Técnica</span></div>
-                    </div>
-                </div>
-
-                <div class="hexagono-item">
-                    <div class="hexagono" tabindex="0" role="button" aria-label="Ampliar foto de Inclusão Digital">
-                        <img class="hex-bg" src="img/inclusao.jpg" alt="Inclusão Digital">
-                        <div class="overlay"><span>Inclusão Digital</span></div>
-                    </div>
-                </div>
-
-                <div class="hexagono-item">
-                    <div class="hexagono" tabindex="0" role="button" aria-label="Ampliar foto de Ponto de Coleta">
-                        <img class="hex-bg" src="img/coleta.jpg" alt="Ponto de Coleta">
-                        <div class="overlay"><span>Ponto de Coleta</span></div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-    </main>
-
-    <!-- Elemento placeholder para o Modal Lightbox gerado pelo JavaScript -->
-    <div id="lightbox" class="lightbox" aria-hidden="true">
-        <button class="lightbox-fechar" aria-label="Fechar modal">&times;</button>
-        <div id="lightbox-img-placeholder"></div>
-        <p id="lightbox-legenda" style="color: #fff; margin-top: 1rem; font-size: 1.2rem;"></p>
+  <div class="accessibility-bar" role="region" aria-label="Acessibilidade">
+    <div class="accessibility-container">
+      <div class="access-controls">
+        <span>Acessibilidade:</span>
+        <button class="access-btn" id="btn-dark-mode" onclick="toggleDarkMode()">🌙 Modo Escuro</button>
+        <button class="access-btn" onclick="toggleContrast()">Alto Contraste</button>
+        <button class="access-btn" onclick="adjustFontSize(1)">A+</button>
+        <button class="access-btn" onclick="adjustFontSize(-1)">A-</button>
+        <button class="access-btn" onclick="resetFontSize()">A</button>
+      </div>
+      <a href="acessibilidade.html" style="color:#fff; font-weight:600;">Declaração de Acessibilidade</a>
     </div>
+  </div>
 
-    <script src="galeria.js"></script>
-</body>
-</html>
+  <header class="site-header" role="banner">
+    <div class="header-container">
+      <a href="index.html" class="logo">Eco<span>Inclusão</span></a>
+      <button class="menu-toggle" id="menu-btn" aria-expanded="false">&#9776; Menu</button>
+      <nav id="main-nav" role="navigation">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="impacto.html">Impacto</a></li>
+          <li><a href="galeria.html" class="ativo" aria-current="page">Galeria</a></li>
+          <li><a href="noticiais.html">Notícias</a></li>
+          <li><a href="midia.html">Mídia</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="acessibilidade.html">Acessibilidade</a></li>
+          <li><a href="orcamento_hospedagem.html">Hospedagem</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container" role="main">
+    <section class="hero">
+      <h1>Galeria Fotográfica das Nossas Ações</h1>
+      <p>Acompanhe os registros de mutirões de triagem, oficinas de capacitação e pontos de coleta comunitária.</p>
+    </section>
+
+    <!-- Hexagônos de Galeria Interativa -->
+    <section class="colmeia-section">
+      <div class="colmeia-grid">
+
+        <div class="hexagono-item">
+          <div class="hexagono" tabindex="0" role="button" aria-label="Ampliar foto de Triagem de Eletrônicos">
+            <img class="hex-bg" src="images (1).jpg" alt="Triagem de Eletrônicos">
+            <div class="overlay"><span>Triagem de Eletrônicos</span></div>
+          </div>
+        </div>
+
+        <div class="hexagono-item">
+          <div class="hexagono" tabindex="0" role="button" aria-label="Ampliar foto de Capacitação Técnica">
+            <img class="hex-bg" src="images (2).jpg" alt="Capacitação Técnica">
+            <div class="overlay"><span>Capacitação Técnica</span></div>
+          </div>
+        </div>
+
+        <div class="hexagono-item">
+          <div class="hexagono" tabindex="0" role="button" aria-label="Ampliar foto de Inclusão Digital">
+            <img class="hex-bg" src="images (3).jpg" alt="Inclusão Digital">
+            <div class="overlay"><span>Inclusão Digital</span></div>
+          </div>
+        </div>
+
+        <div class="hexagono-item">
+          <div class="hexagono" tabindex="0" role="button" aria-label="Ampliar foto de Ponto de Coleta">
+            <img class="hex-bg" src="images (4).jpg" alt="Ponto de Coleta">
+            <div class="overlay"><span>Ponto de Coleta</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Visualizador de Imagem">
+    <button class="lightbox-fechar" aria-label="Fechar galeria">&times;</button>
+    <div class="lightbox-wrapper">
+      <img id="lightbox-img" src="" alt
