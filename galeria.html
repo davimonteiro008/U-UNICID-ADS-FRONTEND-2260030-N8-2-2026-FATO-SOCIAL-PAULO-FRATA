@@ -1,33 +1,57 @@
-<section class="colmeia-section">
-      <div class="colmeia-grid">
-        
-        <div class="hexagono-item">
-          <div class="hexagono" tabindex="0" role="button" aria-label="Ampliar foto de Triagem de Eletrônicos">
-            <img class="hex-bg" src="img/triagem.jpg" alt="Triagem de Eletrônicos">
-            <div class="overlay"><span>Triagem de Eletrônicos</span></div>
-          </div>
-        </div>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria - Projeto EcoInclusão</title>
+    <!-- Altere para "style.css" caso utilize o arquivo unificado de estilos -->
+    <link rel="stylesheet" href="galeria.css">
+</head>
+<body>
 
-        <div class="hexagono-item">
-          <div class="hexagono" tabindex="0" role="button" aria-label="Ampliar foto de Capacitação Técnica">
-            <img class="hex-bg" src="img/capacitacao.jpg" alt="Capacitação Técnica">
-            <div class="overlay"><span>Capacitação Técnica</span></div>
-          </div>
-        </div>
+    <main>
+        <section class="colmeia-section">
+            <div class="colmeia-grid">
+                
+                <div class="hexagono-item">
+                    <div class="hexagono" tabindex="0" role="button" aria-label="Ampliar foto de Triagem de Eletrônicos">
+                        <img class="hex-bg" src="img/triagem.jpg" alt="Triagem de Eletrônicos">
+                        <div class="overlay"><span>Triagem de Eletrônicos</span></div>
+                    </div>
+                </div>
 
-        <div class="hexagono-item">
-          <div class="hexagono" tabindex="0" role="button" aria-label="Ampliar foto de Inclusão Digital">
-            <img class="hex-bg" src="img/inclusao.jpg" alt="Inclusão Digital">
-            <div class="overlay"><span>Inclusão Digital</span></div>
-          </div>
-        </div>
+                <div class="hexagono-item">
+                    <div class="hexagono" tabindex="0" role="button" aria-label="Ampliar foto de Capacitação Técnica">
+                        <img class="hex-bg" src="img/capacitacao.jpg" alt="Capacitação Técnica">
+                        <div class="overlay"><span>Capacitação Técnica</span></div>
+                    </div>
+                </div>
 
-        <div class="hexagono-item">
-          <div class="hexagono" tabindex="0" role="button" aria-label="Ampliar foto de Ponto de Coleta">
-            <img class="hex-bg" src="img/coleta.jpg" alt="Ponto de Coleta">
-            <div class="overlay"><span>Ponto de Coleta</span></div>
-          </div>
-        </div>
+                <div class="hexagono-item">
+                    <div class="hexagono" tabindex="0" role="button" aria-label="Ampliar foto de Inclusão Digital">
+                        <img class="hex-bg" src="img/inclusao.jpg" alt="Inclusão Digital">
+                        <div class="overlay"><span>Inclusão Digital</span></div>
+                    </div>
+                </div>
 
-      </div>
-    </section>
+                <div class="hexagono-item">
+                    <div class="hexagono" tabindex="0" role="button" aria-label="Ampliar foto de Ponto de Coleta">
+                        <img class="hex-bg" src="img/coleta.jpg" alt="Ponto de Coleta">
+                        <div class="overlay"><span>Ponto de Coleta</span></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Elemento placeholder para o Modal Lightbox gerado pelo JavaScript -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lightbox-fechar" aria-label="Fechar modal">&times;</button>
+        <div id="lightbox-img-placeholder"></div>
+        <p id="lightbox-legenda" style="color: #fff; margin-top: 1rem; font-size: 1.2rem;"></p>
+    </div>
+
+    <script src="galeria.js"></script>
+</body>
+</html>
