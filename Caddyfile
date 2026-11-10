@@ -1,0 +1,9 @@
+{
+    auto_https off
+}
+
+:8080 {
+    root * .
+    file_server
+    try_files {path} {path}/ /index.html
+}
