@@ -1,14 +1,14 @@
 description: Para que serve a regra
 globs: public/*/.html
 alwaysApply: false--
-# Título da regra
+# FATO-SOCIAL
 Conteúdo em Markdown:
 passos, exemplos e diretrizes
 
 description: HTML5 semântico e acessível no EcoConecta
 globs: public/*/.html
 alwaysApply: false--
-# HTML semântico – EcoConecta
+# HTML semântico – Fato-Social
 ## 1. Objetivo
 Páginas semânticas, acessíveis e iguais ao index.html.
 ## 2. Contexto do projeto
