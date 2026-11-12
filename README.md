@@ -25,5 +25,5 @@ Na dúvida sobre conteúdo ou página, pergunte antes
 description: Padrões de CSS do site
 globs: public/css/*/.css
 alwaysApply: false--
-# CSS – EcoConecta- Use as variáveis de :root.- Mobile-first: min-width 768/1024px.- Classes em português, padrão BEM:
+# CSS – Fato Social- Use as variáveis de :root.- Mobile-first: min-width 768/1024px.- Classes em português, padrão BEM:
 .card, .card__icone, .botao--primario- Foco visível e contraste AA.
