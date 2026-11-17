@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Inscreva-se como voluntário, envie uma mensagem ou apoie os projetos da Fato Social via PIX e doações materiais.">
+  <title>Contato, Voluntariado & Doações | Fato Social</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animacoes.css">
+</head>
+<body>
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- Barra de Acessibilidade WCAG 2.1 AA -->
+  <div class="a11y-bar" role="region" aria-label="Barra de acessibilidade">
+    <div class="a11y-bar-inner">
+      <div class="a11y-shortcuts">
+        <a href="#conteudo-principal" accesskey="1">Conteúdo [1]</a>
+        <a href="#menu-principal" accesskey="2">Menu [2]</a>
+        <a href="acessibilidade.html">Acessibilidade WCAG 2.1 AA</a>
+      </div>
+      <div class="a11y-controls">
+        <button type="button" class="a11y-btn" data-action="font-dec" aria-label="Diminuir tamanho da fonte">A-</button>
+        <button type="button" class="a11y-btn" data-action="font-reset" aria-label="Restaurar tamanho padrão da fonte">A</button>
+        <button type="button" class="a11y-btn" data-action="font-inc" aria-label="Aumentar tamanho da fonte">A+</button>
+        <button type="button" class="a11y-btn" data-action="toggle-contrast" aria-pressed="false">Alto Contraste</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cabeçalho Principal -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Fato Social — Página Inicial">
+        <span class="brand-fato">Fato</span>&nbsp;<span class="brand-social">Social</span>
+      </a>
+
+      <button type="button" class="mobile-menu-btn" aria-expanded="false" aria-controls="menu-principal">
+        ☰ Menu
+      </button>
+
+      <nav id="menu-principal" class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="impacto.html">Impacto</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="midia.html">Mídia</a></li>
+          <li><a href="contato.html" aria-current="page" class="active">Contato</a></li>
+          <li><a href="acessibilidade.html">Acessibilidade</a></li>
+          <li><a href="orcamento_hospedagem.html">Hospedagem</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" tabindex="-1">
+    <section class="hero-banner reveal">
+      <span class="hero-badge">Participe &amp; Apoie</span>
+      <h1>Voluntariado, Contato e Doações Solidárias</h1>
+      <p>Preencha o formulário com salvamento automático para atuar nos mutirões ou contribua diretamente para a manutenção dos projetos.</p>
+    </section>
+
+    <div class="grid-2 reveal" style="align-items: start;">
+      <!-- Coluna 1: Formulário de Contato / Voluntariado -->
+      <section class="form-panel" id="voluntariado" aria-labelledby="titulo-form-voluntario">
+        <h2 id="titulo-form-voluntario" class="section-title" style="font-size: 1.4rem; margin-bottom: 6px;">Formulário de Contato &amp; Voluntariado</h2>
+        <p class="section-subtitle" style="margin-bottom: 18px;">Seus dados são salvos automaticamente como rascunho no navegador caso precise continuar depois.</p>
+
+        <div id="draft-restored-banner" class="status-banner info" role="status"></div>
+
+        <form id="volunteer-form" novalidate>
+          <div class="form-group">
+            <label for="nome">Nome Completo *</label>
+            <input type="text" id="nome" name="nome" class="form-control" required placeholder="Ex.: Mariana Silva Oliveira">
+            <div id="err-nome" class="form-error" aria-live="polite"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail de Contato *</label>
+            <input type="email" id="email" name="email" class="form-control" required placeholder="voce@exemplo.com.br">
+            <div id="err-email" class="form-error" aria-live="polite"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="telefone">Telefone / WhatsApp com DDD *</label>
+            <input type="tel" id="telefone" name="telefone" class="form-control" required placeholder="(11) 99999-9999">
+            <div id="err-telefone" class="form-error" aria-live="polite"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="area">Área de Interesse *</label>
+            <select id="area" name="area" class="form-control" required>
+              <option value="">Selecione uma opção...</option>
+              <option value="Mutirões de Triagem Solidária">Mutirões de Triagem Solidária</option>
+              <option value="Oficinas de Inclusão Digital e TI">Oficinas de Inclusão Digital e TI</option>
+              <option value="Pontos de Coleta e Hortas Urbanas">Pontos de Coleta e Hortas Urbanas</option>
+              <option value="Apoio Administrativo e Comunicação">Apoio Administrativo e Comunicação</option>
+              <option value="Parceria Institucional / Empresa">Parceria Institucional / Empresa</option>
+            </select>
+            <div id="err-area" class="form-error" aria-live="polite"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="disponibilidade">Disponibilidade Semanal</label>
+            <select id="disponibilidade" name="disponibilidade" class="form-control">
+              <option value="Sábados (08h às 14h)">Sábados (08h às 14h)</option>
+              <option value="Dias úteis — Período da manhã">Dias úteis — Período da manhã</option>
+              <option value="Dias úteis — Período da tarde">Dias úteis — Período da tarde</option>
+              <option value="Apoio remoto / flexível">Apoio remoto / flexível</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="mensagem">Mensagem ou Habilidades que Deseja Compartilhar *</label>
+            <textarea id="mensagem" name="mensagem" rows="4" class="form-control" required placeholder="Conte como gostaria de contribuir ou deixe sua dúvida..."></textarea>
+            <div id="err-mensagem" class="form-error" aria-live="polite"></div>
+          </div>
+
+          <button type="submit" class="btn btn-forest" style="width: 100%;">Enviar Inscrição / Mensagem</button>
+        </form>
+
+        <div id="form-status-banner" class="status-banner success" role="status"></div>
+
+        <div style="margin-top: 26px;">
+          <h3 style="font-size: 1rem; color: var(--forest-800); margin-bottom: 10px;">Histórico de Envios Neste Navegador</h3>
+          <div id="saved-submissions-list"></div>
+        </div>
+      </section>
+
+      <!-- Coluna 2: Área de Doações e Apoio -->
+      <section class="donation-box" id="doacoes" aria-labelledby="titulo-area-doacoes">
+        <span class="hero-badge" style="background: var(--sand-100); color: var(--forest-800); border-color: var(--sand-200);">Transparência 100% Auditada</span>
+        <h2 id="titulo-area-doacoes" class="section-title" style="font-size: 1.4rem; margin-bottom: 8px;">Área de Doações e Apoio Financeiro</h2>
+        <p class="section-subtitle">Sua contribuição mantém nossos laboratórios de informática, cestas nutricionais e ecopontos ativos.</p>
+
+        <div class="amount-grid" role="group" aria-label="Selecionar valor da doação">
+          <button type="button" class="amount-btn" data-amount="25">R$ 25</button>
+          <button type="button" class="amount-btn active" data-amount="50">R$ 50</button>
+          <button type="button" class="amount-btn" data-amount="100">R$ 100</button>
+          <button type="button" class="amount-btn" data-amount="250">R$ 250</button>
+        </div>
+
+        <div class="form-group">
+          <label for="custom-donation-amount">Ou digite outro valor (R$)</label>
+          <input type="number" id="custom-donation-amount" class="form-control" min="5" step="5" value="50">
+        </div>
+
+        <p id="donation-impact-preview" style="font-size: 0.94rem; color: var(--forest-800); background: var(--emerald-100); padding: 12px 14px; border-radius: 8px; margin-bottom: 16px;"></p>
+
+        <div class="pix-panel">
+          <strong style="display:block; color: var(--forest-800); margin-bottom: 6px;">Chave PIX Institucional (CNPJ / E-mail):</strong>
+          <code style="display:block; background:#FFFFFF; padding:10px 12px; border-radius:6px; border:1px solid var(--sand-200); font-size:0.95rem; margin-bottom:12px;">doacoes@fatosocial.org.br</code>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <button type="button" id="copy-pix-btn" class="btn btn-forest">Copiar Chave PIX</button>
+            <button type="button" id="confirm-donation-btn" class="btn btn-amber">Registrar Apoio Simulado</button>
+          </div>
+        </div>
+
+        <div id="donation-status" class="status-banner success" role="status"></div>
+
+        <div style="margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--border-subtle);">
+          <h3 style="font-size: 1.05rem; color: var(--forest-800); margin-bottom: 8px;">Doação de Alimentos, Livros e Equipamentos</h3>
+          <p class="card-text" style="margin-bottom: 0;">Aceitamos alimentos não perecíveis, roupas em bom estado, livros didáticos e notebooks usados para recondicionamento nas oficinas de inclusão digital. Entregue em qualquer um dos nossos <a href="midia.html#mapa-coleta" style="font-weight:700; text-decoration:underline;">pontos de coleta</a>.</p>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Fato <span>Social</span></div>
+        <p>Organização da Sociedade Civil dedicada à inclusão socioambiental, triagem solidária, capacitação tecnológica e transparência comunitária em São Paulo.</p>
+      </div>
+      <div>
+        <h3>Navegação</h3>
+        <ul>
+          <li><a href="sobre.html">Quem Somos</a></li>
+          <li><a href="projetos.html">Projetos Ativos</a></li>
+          <li><a href="impacto.html">Transparência e Impacto</a></li>
+          <li><a href="galeria.html">Galeria Fotográfica</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Comunidade</h3>
+        <ul>
+          <li><a href="noticias.html">Notícias e Editais</a></li>
+          <li><a href="midia.html#videos-youtube">Vídeos Integrados do YouTube</a></li>
+          <li><a href="midia.html#podcast-vozes">Podcast Vozes do Bairro</a></li>
+          <li><a href="contato.html">Voluntariado e Doações</a></li>
+          <li><a href="acessibilidade.html">Declaração WCAG 2.1 AA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contato &amp; Sede</h3>
+        <ul>
+          <li>Zona Leste / Tatuapé — São Paulo, SP</li>
+          <li>E-mail: contato@fatosocial.org.br</li>
+          <li>PIX Solidário: doacoes@fatosocial.org.br</li>
+          <li><a href="orcamento_hospedagem.html">Infraestrutura e Hospedagem</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Fato Social — Todos os direitos reservados.</span>
+      <span>Desenvolvido com HTML5 Semântico, CSS3, JavaScript e Acessibilidade WCAG 2.1 AA.</span>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/animacoes.js"></script>
+</body>
+</html>

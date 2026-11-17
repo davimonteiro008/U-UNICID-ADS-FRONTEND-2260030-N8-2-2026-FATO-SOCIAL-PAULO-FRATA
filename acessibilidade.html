@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Declaração de acessibilidade, atalhos de teclado e painel de personalização visual do portal Fato Social conforme diretrizes WCAG 2.1 nível AA.">
+  <title>Acessibilidade Digital — Conformidade WCAG 2.1 AA | Fato Social</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animacoes.css">
+</head>
+<body>
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- Barra de Acessibilidade WCAG 2.1 AA -->
+  <div class="a11y-bar" role="region" aria-label="Barra de acessibilidade">
+    <div class="a11y-bar-inner">
+      <div class="a11y-shortcuts">
+        <a href="#conteudo-principal" accesskey="1">Conteúdo [1]</a>
+        <a href="#menu-principal" accesskey="2">Menu [2]</a>
+        <a href="acessibilidade.html">Acessibilidade WCAG 2.1 AA</a>
+      </div>
+      <div class="a11y-controls">
+        <button type="button" class="a11y-btn" data-action="font-dec" aria-label="Diminuir tamanho da fonte">A-</button>
+        <button type="button" class="a11y-btn" data-action="font-reset" aria-label="Restaurar tamanho padrão da fonte">A</button>
+        <button type="button" class="a11y-btn" data-action="font-inc" aria-label="Aumentar tamanho da fonte">A+</button>
+        <button type="button" class="a11y-btn" data-action="toggle-contrast" aria-pressed="false">Alto Contraste</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cabeçalho Principal -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Fato Social — Página Inicial">
+        <span class="brand-fato">Fato</span>&nbsp;<span class="brand-social">Social</span>
+      </a>
+
+      <button type="button" class="mobile-menu-btn" aria-expanded="false" aria-controls="menu-principal">
+        ☰ Menu
+      </button>
+
+      <nav id="menu-principal" class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="impacto.html">Impacto</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="midia.html">Mídia</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="acessibilidade.html" aria-current="page" class="active">Acessibilidade</a></li>
+          <li><a href="orcamento_hospedagem.html">Hospedagem</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" tabindex="-1">
+    <section class="hero-banner reveal">
+      <span class="hero-badge">Inclusão Digital Universal</span>
+      <h1>Declaração de Acessibilidade (WCAG 2.1 AA)</h1>
+      <p>O portal Fato Social foi projetado para garantir navegação plena por leitores de tela, teclado e pessoas com baixa visão.</p>
+    </section>
+
+    <section class="section-block reveal">
+      <div class="grid-2">
+        <div class="form-panel">
+          <h2 class="section-title" style="font-size: 1.35rem; margin-bottom: 10px;">Painel Interativo de Preferências</h2>
+          <p class="section-subtitle" style="margin-bottom: 18px;">Ajuste o contraste e a escala tipográfica. Suas escolhas ficam salvas em todas as páginas do portal.</p>
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom: 18px;">
+            <button type="button" class="btn btn-forest" data-action="toggle-contrast" aria-pressed="false">Alternar Alto Contraste (WCAG AAA)</button>
+            <button type="button" class="btn btn-soft" data-action="font-inc">Aumentar Fonte (A+)</button>
+            <button type="button" class="btn btn-soft" data-action="font-dec">Diminuir Fonte (A-)</button>
+            <button type="button" class="btn btn-soft" data-action="font-reset">Restaurar Padrão</button>
+          </div>
+          <p class="card-text">Todos os componentes respeitam também a preferência nativa do sistema operacional <code>prefers-reduced-motion</code>, desativando animações automaticamente quando solicitado.</p>
+        </div>
+
+        <div class="form-panel">
+          <h2 class="section-title" style="font-size: 1.35rem; margin-bottom: 10px;">Atalhos de Teclado Disponíveis</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Atalho</th>
+                  <th>Função</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Tab / Shift + Tab</strong></td>
+                  <td>Navegar sequencialmente entre links, botões e campos</td>
+                </tr>
+                <tr>
+                  <td><strong>Alt + 1</strong></td>
+                  <td>Ir diretamente para o conteúdo principal</td>
+                </tr>
+                <tr>
+                  <td><strong>Alt + 2</strong></td>
+                  <td>Ir para o menu de navegação principal</td>
+                </tr>
+                <tr>
+                  <td><strong>Alt + C</strong></td>
+                  <td>Ativar ou desativar o modo de Alto Contraste</td>
+                </tr>
+                <tr>
+                  <td><strong>Esc</strong></td>
+                  <td>Fechar janelas modais de galeria ou leitura</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Fato <span>Social</span></div>
+        <p>Organização da Sociedade Civil dedicada à inclusão socioambiental, triagem solidária, capacitação tecnológica e transparência comunitária em São Paulo.</p>
+      </div>
+      <div>
+        <h3>Navegação</h3>
+        <ul>
+          <li><a href="sobre.html">Quem Somos</a></li>
+          <li><a href="projetos.html">Projetos Ativos</a></li>
+          <li><a href="impacto.html">Transparência e Impacto</a></li>
+          <li><a href="galeria.html">Galeria Fotográfica</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Comunidade</h3>
+        <ul>
+          <li><a href="noticias.html">Notícias e Editais</a></li>
+          <li><a href="midia.html#videos-youtube">Vídeos Integrados do YouTube</a></li>
+          <li><a href="midia.html#podcast-vozes">Podcast Vozes do Bairro</a></li>
+          <li><a href="contato.html">Voluntariado e Doações</a></li>
+          <li><a href="acessibilidade.html">Declaração WCAG 2.1 AA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contato &amp; Sede</h3>
+        <ul>
+          <li>Zona Leste / Tatuapé — São Paulo, SP</li>
+          <li>E-mail: contato@fatosocial.org.br</li>
+          <li>PIX Solidário: doacoes@fatosocial.org.br</li>
+          <li><a href="orcamento_hospedagem.html">Infraestrutura e Hospedagem</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Fato Social — Todos os direitos reservados.</span>
+      <span>Desenvolvido com HTML5 Semântico, CSS3, JavaScript e Acessibilidade WCAG 2.1 AA.</span>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/animacoes.js"></script>
+</body>
+</html>

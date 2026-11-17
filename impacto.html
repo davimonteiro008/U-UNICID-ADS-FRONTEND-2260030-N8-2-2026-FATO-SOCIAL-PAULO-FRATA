@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Acompanhe os indicadores de transparência, metas ambientais, prestação de contas e apoiadores da Fato Social.">
+  <title>Impacto & Transparência — Indicadores e Prestação de Contas | Fato Social</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animacoes.css">
+</head>
+<body>
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- Barra de Acessibilidade WCAG 2.1 AA -->
+  <div class="a11y-bar" role="region" aria-label="Barra de acessibilidade">
+    <div class="a11y-bar-inner">
+      <div class="a11y-shortcuts">
+        <a href="#conteudo-principal" accesskey="1">Conteúdo [1]</a>
+        <a href="#menu-principal" accesskey="2">Menu [2]</a>
+        <a href="acessibilidade.html">Acessibilidade WCAG 2.1 AA</a>
+      </div>
+      <div class="a11y-controls">
+        <button type="button" class="a11y-btn" data-action="font-dec" aria-label="Diminuir tamanho da fonte">A-</button>
+        <button type="button" class="a11y-btn" data-action="font-reset" aria-label="Restaurar tamanho padrão da fonte">A</button>
+        <button type="button" class="a11y-btn" data-action="font-inc" aria-label="Aumentar tamanho da fonte">A+</button>
+        <button type="button" class="a11y-btn" data-action="toggle-contrast" aria-pressed="false">Alto Contraste</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cabeçalho Principal -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Fato Social — Página Inicial">
+        <span class="brand-fato">Fato</span>&nbsp;<span class="brand-social">Social</span>
+      </a>
+
+      <button type="button" class="mobile-menu-btn" aria-expanded="false" aria-controls="menu-principal">
+        ☰ Menu
+      </button>
+
+      <nav id="menu-principal" class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="impacto.html" aria-current="page" class="active">Impacto</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="midia.html">Mídia</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="acessibilidade.html">Acessibilidade</a></li>
+          <li><a href="orcamento_hospedagem.html">Hospedagem</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" tabindex="-1">
+    <section class="hero-banner reveal">
+      <span class="hero-badge">Transparência &amp; Prestação de Contas</span>
+      <h1>Indicadores de Impacto Socioambiental 2026</h1>
+      <p>Dados consolidados das nossas entregas, destinação de recursos financeiros e participação comunitária em tempo real.</p>
+    </section>
+
+    <section class="section-block reveal" aria-labelledby="titulo-indicadores-gerais">
+      <h2 id="titulo-indicadores-gerais" class="section-title" style="margin-bottom: 18px;">Resultados Consolidados do Ano</h2>
+      <div class="grid-4">
+        <div class="kpi-card">
+          <div class="kpi-value">94,2%</div>
+          <div class="kpi-label">Recursos Aplicados Diretamente na Ponta</div>
+        </div>
+        <div class="kpi-card amber">
+          <div class="kpi-value">18.420 kg</div>
+          <div class="kpi-label">Materiais Recicláveis Encaminhados</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value">612</div>
+          <div class="kpi-label">Voluntários Ativos Cadastrados</div>
+        </div>
+        <div class="kpi-card amber">
+          <div class="kpi-value">100%</div>
+          <div class="kpi-label">Relatórios Auditados Publicados</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block reveal" aria-labelledby="titulo-painel-local">
+      <h2 id="titulo-painel-local" class="section-title" style="margin-bottom: 8px;">Sua Participação Registrada (LocalStorage)</h2>
+      <p class="section-subtitle" style="margin-bottom: 18px;">Resumo interativo das inscrições de voluntariado e apoios simulados neste dispositivo.</p>
+      <div id="local-community-stats" class="grid-2"></div>
+    </section>
+
+    <section class="section-block reveal" aria-labelledby="titulo-tabela-transparencia">
+      <h2 id="titulo-tabela-transparencia" class="section-title" style="margin-bottom: 18px;">Prestação de Contas por Programa (Trimestre Atual)</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Programa / Frente</th>
+              <th>Meta Trimestral</th>
+              <th>Realizado</th>
+              <th>Investimento</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Mutirões de Triagem Alimentar</strong></td>
+              <td>1.200 cestas</td>
+              <td>1.420 cestas</td>
+              <td>R$ 34.800,00</td>
+              <td>Superada (118%)</td>
+            </tr>
+            <tr>
+              <td><strong>Oficinas de Inclusão Digital</strong></td>
+              <td>350 alunos</td>
+              <td>380 alunos</td>
+              <td>R$ 19.500,00</td>
+              <td>Superada (108%)</td>
+            </tr>
+            <tr>
+              <td><strong>Pontos de Coleta Comunitária</strong></td>
+              <td>15 toneladas</td>
+              <td>18,4 toneladas</td>
+              <td>R$ 14.200,00</td>
+              <td>Superada (122%)</td>
+            </tr>
+            <tr>
+              <td><strong>Hortas Urbanas e Reflorestamento</strong></td>
+              <td>800 mudas</td>
+              <td>960 mudas</td>
+              <td>R$ 8.900,00</td>
+              <td>Superada (120%)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Fato <span>Social</span></div>
+        <p>Organização da Sociedade Civil dedicada à inclusão socioambiental, triagem solidária, capacitação tecnológica e transparência comunitária em São Paulo.</p>
+      </div>
+      <div>
+        <h3>Navegação</h3>
+        <ul>
+          <li><a href="sobre.html">Quem Somos</a></li>
+          <li><a href="projetos.html">Projetos Ativos</a></li>
+          <li><a href="impacto.html">Transparência e Impacto</a></li>
+          <li><a href="galeria.html">Galeria Fotográfica</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Comunidade</h3>
+        <ul>
+          <li><a href="noticias.html">Notícias e Editais</a></li>
+          <li><a href="midia.html#videos-youtube">Vídeos Integrados do YouTube</a></li>
+          <li><a href="midia.html#podcast-vozes">Podcast Vozes do Bairro</a></li>
+          <li><a href="contato.html">Voluntariado e Doações</a></li>
+          <li><a href="acessibilidade.html">Declaração WCAG 2.1 AA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contato &amp; Sede</h3>
+        <ul>
+          <li>Zona Leste / Tatuapé — São Paulo, SP</li>
+          <li>E-mail: contato@fatosocial.org.br</li>
+          <li>PIX Solidário: doacoes@fatosocial.org.br</li>
+          <li><a href="orcamento_hospedagem.html">Infraestrutura e Hospedagem</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Fato Social — Todos os direitos reservados.</span>
+      <span>Desenvolvido com HTML5 Semântico, CSS3, JavaScript e Acessibilidade WCAG 2.1 AA.</span>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/animacoes.js"></script>
+</body>
+</html>

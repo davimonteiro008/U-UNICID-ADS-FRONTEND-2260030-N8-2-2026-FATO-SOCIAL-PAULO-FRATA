@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Central multimídia conectada da Fato Social com vídeos integrados do YouTube, Podcast Vozes do Bairro com transcrição sincronizada e mapa de pontos de coleta.">
+  <title>Mídia &amp; Multimídia Conectada — Vídeos e Podcast | Fato Social</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animacoes.css">
+</head>
+<body>
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- Barra de Acessibilidade WCAG 2.1 AA -->
+  <div class="a11y-bar" role="region" aria-label="Barra de acessibilidade">
+    <div class="a11y-bar-inner">
+      <div class="a11y-shortcuts">
+        <a href="#conteudo-principal" accesskey="1">Conteúdo [1]</a>
+        <a href="#menu-principal" accesskey="2">Menu [2]</a>
+        <a href="#videos-youtube" accesskey="3">Vídeos [3]</a>
+        <a href="#podcast-vozes" accesskey="4">Podcast [4]</a>
+        <a href="acessibilidade.html">Acessibilidade WCAG 2.1 AA</a>
+      </div>
+      <div class="a11y-controls">
+        <button type="button" class="a11y-btn" data-action="font-dec" aria-label="Diminuir tamanho da fonte">A-</button>
+        <button type="button" class="a11y-btn" data-action="font-reset" aria-label="Restaurar tamanho padrão da fonte">A</button>
+        <button type="button" class="a11y-btn" data-action="font-inc" aria-label="Aumentar tamanho da fonte">A+</button>
+        <button type="button" class="a11y-btn" data-action="toggle-contrast" aria-pressed="false">Alto Contraste</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cabeçalho Principal -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Fato Social — Página Inicial">
+        <span class="brand-fato">Fato</span>&nbsp;<span class="brand-social">Social</span>
+      </a>
+
+      <button type="button" class="mobile-menu-btn" aria-expanded="false" aria-controls="menu-principal">
+        ☰ Menu
+      </button>
+
+      <nav id="menu-principal" class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="impacto.html">Impacto</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="midia.html" aria-current="page" class="active">Mídia</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="acessibilidade.html">Acessibilidade</a></li>
+          <li><a href="orcamento_hospedagem.html">Hospedagem</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" tabindex="-1">
+    <section class="hero-banner reveal">
+      <span class="hero-badge">Central Multimídia Integrada • WCAG 2.1 AA</span>
+      <h1>Vídeos Educativos &amp; Podcast Vozes do Bairro</h1>
+      <p>Navegue diretamente para os vídeos integrados do YouTube com capítulos sincronizados ou ouça o Podcast Vozes do Bairro com transcrição interativa.</p>
+      <div class="hero-actions" role="navigation" aria-label="Atalhos diretos da central multimídia">
+        <a href="#videos-youtube" class="btn btn-primary">Ir para Vídeos do YouTube ↓</a>
+        <a href="#podcast-vozes" class="btn btn-amber">Ir para Podcast Vozes do Bairro ↓</a>
+        <a href="#mapa-coleta" class="btn btn-outline">Pontos de Coleta ↓</a>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 1: VÍDEOS INTEGRADOS DO YOUTUBE -->
+    <section id="videos-youtube" class="section-block reveal" aria-labelledby="titulo-videos-yt">
+      <div class="section-header">
+        <div>
+          <h2 id="titulo-videos-yt" class="section-title">Vídeos Integrados do YouTube</h2>
+          <p class="section-subtitle">Selecione qualquer aula ou capítulo abaixo para reproduzir diretamente no player conectado, sem redirecionamentos externos.</p>
+        </div>
+        <div class="media-mode-switch" role="group" aria-label="Modo de reprodução do vídeo">
+          <button type="button" id="btn-mode-yt" class="btn btn-forest active" aria-pressed="true">Player YouTube</button>
+          <button type="button" id="btn-mode-local" class="btn btn-soft" aria-pressed="false">Player Local (MP4)</button>
+        </div>
+      </div>
+
+      <div class="card connected-stage" id="video-stage-card">
+        <div class="connected-stage-grid">
+          <div>
+            <div class="video-responsive" id="yt-player-wrapper">
+              <iframe
+                id="main-yt-iframe"
+                src="https://www.youtube-nocookie.com/embed/uWqvUO3LIZY?rel=0&modestbranding=1&hl=pt-BR&cc_lang_pref=pt&cc_load_policy=1"
+                title="Você conhece os 17 Objetivos de Desenvolvimento Sustentável? — ONU Brasil"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+              </iframe>
+            </div>
+
+            <div id="local-video-wrapper" style="display: none;">
+              <video id="main-local-video" class="midia-player" controls preload="metadata" aria-label="Vídeo institucional Fato Social com legendas em português">
+                <source src="assets/video/video-fatosocial.mp4" type="video/mp4">
+                <track kind="captions" src="assets/captions/mutirao-legendas.vtt" srclang="pt" label="Português (Brasil)" default>
+                Seu navegador não suporta a reprodução de vídeo HTML5.
+              </video>
+            </div>
+
+            <div id="file-protocol-notice" class="status-banner info" style="display: none; margin-top: 12px;">
+              Modo local (<code>file://</code>) detectado: o player institucional HTML5 foi ativado automaticamente para evitar bloqueio de incorporação do YouTube. Ao publicar no GitHub Pages ou servidor HTTP, o YouTube carrega nativamente.
+            </div>
+          </div>
+
+          <div class="stage-info-panel">
+            <span id="stage-video-badge" class="card-meta">Vídeo 01 • Agenda 2030 &amp; ODS • ONU Brasil</span>
+            <h3 id="stage-video-title" class="card-title">Você conhece os 17 Objetivos de Desenvolvimento Sustentável?</h3>
+            <p id="stage-video-desc" class="card-text">Entenda como nossas ações locais de erradicação da pobreza, educação de qualidade e ação climática se conectam às metas globais da ONU.</p>
+            <div class="card-btn-row" style="margin-bottom: 10px;">
+              <a id="stage-yt-external-link" href="https://www.youtube.com/watch?v=uWqvUO3LIZY" target="_blank" rel="noopener noreferrer" class="btn btn-soft">Assistir no YouTube ↗</a>
+            </div>
+
+            <div class="chapter-box">
+              <strong>Atalhos de Capítulos Conectados (Salto Direto):</strong>
+              <div id="stage-video-chapters" class="chapter-list" role="group" aria-label="Capítulos do vídeo selecionado">
+                <button type="button" class="chapter-btn active" data-start="0">00:00 — Introdução à Agenda 2030</button>
+                <button type="button" class="chapter-btn" data-start="45">00:45 — Erradicação da Pobreza e Inclusão</button>
+                <button type="button" class="chapter-btn" data-start="95">01:35 — Ação Climática e Comunidades</button>
+              </div>
+            </div>
+
+            <details class="transcript-box" open>
+              <summary>Transcrição &amp; Resumo Acessível do Vídeo Atual</summary>
+              <p id="stage-video-transcript" style="margin-top: 8px;">
+                Apresentação dos 17 Objetivos de Desenvolvimento Sustentável (ODS) estabelecidos pelas Nações Unidas para transformar o mundo até 2030, destacando a atuação comunitária na redução das desigualdades, educação tecnológica e preservação ambiental.
+              </p>
+            </details>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-3 stage-playlist-grid">
+        <article id="video-ods" class="card video-playlist-card active" data-video-key="ods">
+          <div class="card-body">
+            <div class="card-meta">Vídeo 01 • Agenda 2030 &amp; ODS • ONU Brasil</div>
+            <h3 class="card-title">Você conhece os 17 Objetivos de Desenvolvimento Sustentável?</h3>
+            <p class="card-text">Conexão entre os projetos locais da Fato Social e as metas globais de sustentabilidade e inclusão.</p>
+            <div class="card-btn-row">
+              <button type="button" class="btn btn-forest select-video-btn" data-video-key="ods">Assistir no Player</button>
+              <a href="https://www.youtube.com/watch?v=uWqvUO3LIZY" target="_blank" rel="noopener noreferrer" class="btn btn-soft" aria-label="Abrir Vídeo 01 sobre os 17 ODS no YouTube">YouTube ↗</a>
+              <a href="midia.html?video=ods#videos-youtube" class="btn btn-soft">Link Direto</a>
+            </div>
+          </div>
+        </article>
+
+        <article id="video-economia" class="card video-playlist-card" data-video-key="economia">
+          <div class="card-body">
+            <div class="card-meta">Vídeo 02 • Economia Circular • Yattó</div>
+            <h3 class="card-title">Logística Reversa e Economia Circular: Como Funciona na Prática?</h3>
+            <p class="card-text">O modelo econômico que inspira nossos mutirões de triagem, reaproveitamento de materiais e logística reversa.</p>
+            <div class="card-btn-row">
+              <button type="button" class="btn btn-forest select-video-btn" data-video-key="economia">Assistir no Player</button>
+              <a href="https://www.youtube.com/watch?v=TCwIGf9sM3Q" target="_blank" rel="noopener noreferrer" class="btn btn-soft" aria-label="Abrir Vídeo 02 sobre Logística Reversa e Economia Circular no YouTube">YouTube ↗</a>
+              <a href="midia.html?video=economia#videos-youtube" class="btn btn-soft">Link Direto</a>
+            </div>
+          </div>
+        </article>
+
+        <article id="video-coleta" class="card video-playlist-card" data-video-key="coleta">
+          <div class="card-body">
+            <div class="card-meta">Vídeo 03 • Educação Ambiental • Info Sustentável</div>
+            <h3 class="card-title">Como Funciona a Coleta Seletiva e o Ciclo dos Resíduos</h3>
+            <p class="card-text">Material utilizado em nossas oficinas escolares para demonstrar a separação correta na fonte.</p>
+            <div class="card-btn-row">
+              <button type="button" class="btn btn-forest select-video-btn" data-video-key="coleta">Assistir no Player</button>
+              <a href="https://www.youtube.com/watch?v=1zJd9xcYl_o" target="_blank" rel="noopener noreferrer" class="btn btn-soft" aria-label="Abrir Vídeo 03 sobre Coleta Seletiva no YouTube">YouTube ↗</a>
+              <a href="midia.html?video=coleta#videos-youtube" class="btn btn-soft">Link Direto</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 2: PODCAST VOZES DO BAIRRO -->
+    <section id="podcast-vozes" class="section-block reveal" aria-labelledby="titulo-podcast">
+      <div class="section-header">
+        <div>
+          <h2 id="titulo-podcast" class="section-title">Podcast Vozes do Bairro (Áudio &amp; Transcrição)</h2>
+          <p class="section-subtitle">Boletins sonoros comunitários com player conectado, salto por minuto na transcrição e leitura em voz alta (PT-BR).</p>
+        </div>
+        <span id="podcast-resume-badge" class="hero-badge resume-pill" style="display: none;"></span>
+      </div>
+
+      <div class="card podcast-master-player" id="podcast-master-card">
+        <div class="podcast-master-header">
+          <div>
+            <span id="pod-master-meta" class="card-meta">Episódio 01 • Boletim Comunitário Fato Social</span>
+            <h3 id="pod-master-title" class="card-title">Como Organizar um Ponto de Coleta no Seu Condomínio</h3>
+          </div>
+          <div class="podcast-controls-group" role="group" aria-label="Controles extras do podcast">
+            <button type="button" class="btn btn-soft speed-btn active" data-rate="1">1.0x</button>
+            <button type="button" class="btn btn-soft speed-btn" data-rate="1.25">1.25x</button>
+            <button type="button" class="btn btn-soft speed-btn" data-rate="1.5">1.5x</button>
+            <button type="button" id="btn-tts-podcast" class="btn btn-amber">Ouvir Transcrição Narrada (PT-BR)</button>
+          </div>
+        </div>
+
+        <audio id="podcast-audio-player" controls preload="metadata" class="podcast-audio-el" aria-label="Player principal do Podcast Vozes do Bairro">
+          <source id="podcast-audio-source" src="assets/audio/episodio-01-triagem.wav" type="audio/wav">
+          Seu navegador não suporta o elemento de áudio HTML5.
+        </audio>
+
+        <div class="synced-transcript-panel" aria-live="polite">
+          <div class="transcript-toolbar">
+            <strong>Transcrição Sincronizada (Clique em um trecho para ir direto ao ponto do áudio):</strong>
+            <div class="card-btn-row">
+              <button type="button" id="btn-copy-transcript" class="btn btn-soft">Copiar Transcrição</button>
+              <a id="btn-download-audio" href="assets/audio/episodio-01-triagem.wav" download class="btn btn-soft">Baixar Áudio (.WAV)</a>
+            </div>
+          </div>
+          <div id="pod-transcript-lines" class="transcript-lines"></div>
+        </div>
+      </div>
+
+      <div class="grid-3 stage-playlist-grid">
+        <article id="episodio-01" class="audio-card podcast-ep-card active" data-ep-key="ep01">
+          <span class="card-meta">Episódio 01 • Triagem &amp; Condomínios</span>
+          <h3 class="card-title">Como Organizar um Ponto de Coleta no Seu Condomínio</h3>
+          <p class="card-text">Passo a passo prático para separar papel limpo, plásticos secos e metais com retirada agendada.</p>
+          <div class="card-btn-row">
+            <button type="button" class="btn btn-forest select-ep-btn" data-ep-key="ep01">Reproduzir Episódio</button>
+            <a href="midia.html?episodio=ep01#podcast-vozes" class="btn btn-soft">Atalho Direto</a>
+          </div>
+        </article>
+
+        <article id="episodio-02" class="audio-card podcast-ep-card" data-ep-key="ep02">
+          <span class="card-meta">Episódio 02 • Educação &amp; TI</span>
+          <h3 class="card-title">Inclusão Digital: Primeiros Passos na Programação Web</h3>
+          <p class="card-text">Como as oficinas gratuitas de HTML semântico e CSS acessível abrem portas no mercado de tecnologia.</p>
+          <div class="card-btn-row">
+            <button type="button" class="btn btn-forest select-ep-btn" data-ep-key="ep02">Reproduzir Episódio</button>
+            <a href="midia.html?episodio=ep02#podcast-vozes" class="btn btn-soft">Atalho Direto</a>
+          </div>
+        </article>
+
+        <article id="episodio-03" class="audio-card podcast-ep-card" data-ep-key="ep03">
+          <span class="card-meta">Episódio 03 • Economia Circular</span>
+          <h3 class="card-title">Boletim Sonoro: Logística Reversa de Eletrônicos</h3>
+          <p class="card-text">Destino responsável de computadores, cabos e periféricos para recondicionamento em laboratórios comunitários.</p>
+          <div class="card-btn-row">
+            <button type="button" class="btn btn-forest select-ep-btn" data-ep-key="ep03">Reproduzir Episódio</button>
+            <a href="midia.html?episodio=ep03#podcast-vozes" class="btn btn-soft">Atalho Direto</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 3: MAPA INTERATIVO -->
+    <section class="section-block reveal" id="mapa-coleta" aria-labelledby="titulo-mapa">
+      <div class="section-header">
+        <div>
+          <h2 id="titulo-mapa" class="section-title">Mapa Interativo — Sede e Pontos de Coleta</h2>
+          <p class="section-subtitle">Localização da nossa base operacional na Zona Leste de São Paulo (Região Tatuapé).</p>
+        </div>
+      </div>
+
+      <div class="card map-card-wrap">
+        <div class="video-responsive map-responsive">
+          <iframe
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-46.5850%2C-23.5480%2C-46.5550%2C-23.5300&amp;layer=mapnik&amp;marker=-23.5390%2C-46.5700"
+            title="Mapa interativo mostrando a sede da Fato Social e pontos de coleta no Tatuapé, São Paulo"
+            loading="lazy">
+          </iframe>
+        </div>
+        <p class="card-meta" style="margin-top: 10px;">Endereço de referência: Região Tatuapé / Zona Leste — São Paulo, SP • Atendimento presencial de segunda a sábado, das 08h às 17h.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Fato <span>Social</span></div>
+        <p>Organização da Sociedade Civil dedicada à inclusão socioambiental, triagem solidária, capacitação tecnológica e transparência comunitária em São Paulo.</p>
+      </div>
+      <div>
+        <h3>Navegação</h3>
+        <ul>
+          <li><a href="sobre.html">Quem Somos</a></li>
+          <li><a href="projetos.html">Projetos Ativos</a></li>
+          <li><a href="impacto.html">Transparência e Impacto</a></li>
+          <li><a href="galeria.html">Galeria Fotográfica</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Multimídia &amp; Comunidade</h3>
+        <ul>
+          <li><a href="midia.html#videos-youtube">Vídeos Integrados do YouTube</a></li>
+          <li><a href="midia.html#podcast-vozes">Podcast Vozes do Bairro</a></li>
+          <li><a href="midia.html#mapa-coleta">Mapa de Pontos de Coleta</a></li>
+          <li><a href="contato.html#voluntariado">Voluntariado e Doações</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contato &amp; Sede</h3>
+        <ul>
+          <li>Zona Leste / Tatuapé — São Paulo, SP</li>
+          <li>E-mail: contato@fatosocial.org.br</li>
+          <li>PIX Solidário: doacoes@fatosocial.org.br</li>
+          <li><a href="acessibilidade.html">Declaração WCAG 2.1 AA</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Fato Social — Todos os direitos reservados.</span>
+      <span>Desenvolvido com HTML5 Semântico, CSS3, JavaScript e Acessibilidade WCAG 2.1 AA.</span>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/midia.js"></script>
+  <script src="js/animacoes.js"></script>
+</body>
+</html>

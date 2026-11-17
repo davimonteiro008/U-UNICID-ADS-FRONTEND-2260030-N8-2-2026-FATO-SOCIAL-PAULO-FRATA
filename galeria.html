@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Acompanhe os registros reais de mutirões de triagem, oficinas de capacitação e pontos de coleta comunitária da Fato Social.">
+  <title>Galeria Fotográfica das Nossas Ações | Fato Social</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animacoes.css">
+</head>
+<body>
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- Barra de Acessibilidade WCAG 2.1 AA -->
+  <div class="a11y-bar" role="region" aria-label="Barra de acessibilidade">
+    <div class="a11y-bar-inner">
+      <div class="a11y-shortcuts">
+        <a href="#conteudo-principal" accesskey="1">Conteúdo [1]</a>
+        <a href="#menu-principal" accesskey="2">Menu [2]</a>
+        <a href="acessibilidade.html">Acessibilidade WCAG 2.1 AA</a>
+      </div>
+      <div class="a11y-controls">
+        <button type="button" class="a11y-btn" data-action="font-dec" aria-label="Diminuir tamanho da fonte">A-</button>
+        <button type="button" class="a11y-btn" data-action="font-reset" aria-label="Restaurar tamanho padrão da fonte">A</button>
+        <button type="button" class="a11y-btn" data-action="font-inc" aria-label="Aumentar tamanho da fonte">A+</button>
+        <button type="button" class="a11y-btn" data-action="toggle-contrast" aria-pressed="false">Alto Contraste</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cabeçalho Principal -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Fato Social — Página Inicial">
+        <span class="brand-fato">Fato</span>&nbsp;<span class="brand-social">Social</span>
+      </a>
+
+      <button type="button" class="mobile-menu-btn" aria-expanded="false" aria-controls="menu-principal">
+        ☰ Menu
+      </button>
+
+      <nav id="menu-principal" class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="impacto.html">Impacto</a></li>
+          <li><a href="galeria.html" aria-current="page" class="active">Galeria</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="midia.html">Mídia</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="acessibilidade.html">Acessibilidade</a></li>
+          <li><a href="orcamento_hospedagem.html">Hospedagem</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" tabindex="-1">
+    <section class="hero-banner reveal">
+      <h1>Galeria Fotográfica das Nossas Ações</h1>
+      <p>Acompanhe os registros de mutirões de triagem, oficinas de capacitação e pontos de coleta comunitária.</p>
+    </section>
+
+    <!-- Filtros por Categoria -->
+    <div class="filter-bar reveal" role="group" aria-label="Filtrar fotografias por categoria">
+      <button type="button" class="filter-pill active" data-gallery-filter="todos" aria-pressed="true">Todas as Ações</button>
+      <button type="button" class="filter-pill" data-gallery-filter="sustentabilidade" aria-pressed="false">Sustentabilidade &amp; Plantio</button>
+      <button type="button" class="filter-pill" data-gallery-filter="triagem" aria-pressed="false">Mutirões de Triagem</button>
+      <button type="button" class="filter-pill" data-gallery-filter="capacitacao" aria-pressed="false">Oficinas de Capacitação</button>
+    </div>
+
+    <!-- Grade 4 Colunas Fiel ao Anexo -->
+    <section class="section-block reveal" aria-label="Registros fotográficos">
+      <div class="grid-4">
+        <article class="photo-tile" data-category="sustentabilidade" tabindex="0">
+          <div class="photo-wrap">
+            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=900&q=85" alt="Mãos segurando muda de planta com terra fértil em ação de educação ambiental" loading="lazy" onerror="this.onerror=null;this.src='assets/img/fallback-acao.svg';">
+          </div>
+          <div class="photo-caption">
+            <h3>Cultivo e Educação Ambiental</h3>
+            <p>Oficina prática de germinação e cuidado com espécies nativas junto aos moradores.</p>
+          </div>
+        </article>
+
+        <article class="photo-tile" data-category="sustentabilidade" tabindex="0">
+          <div class="photo-wrap">
+            <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=900&q=85" alt="Voluntários plantando mudas verdes diretamente no solo da horta comunitária" loading="lazy" onerror="this.onerror=null;this.src='assets/img/fallback-acao.svg';">
+          </div>
+          <div class="photo-caption">
+            <h3>Mutirão de Plantio Comunitário</h3>
+            <p>Revitalização de áreas verdes urbanas com participação de jovens e famílias do bairro.</p>
+          </div>
+        </article>
+
+        <article class="photo-tile" data-category="capacitacao" tabindex="0">
+          <div class="photo-wrap">
+            <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=900&q=85" alt="Mãos erguendo lâmpadas iluminadas pelo sol representando energia limpa e inovação" loading="lazy" onerror="this.onerror=null;this.src='assets/img/fallback-acao.svg';">
+          </div>
+          <div class="photo-caption">
+            <h3>Inovação e Energia Limpa</h3>
+            <p>Projetos de eficiência energética e conscientização sobre sustentabilidade nos lares.</p>
+          </div>
+        </article>
+
+        <article class="photo-tile" data-category="sustentabilidade" tabindex="0">
+          <div class="photo-wrap">
+            <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=85" alt="Voluntária caminhando em trilha de preservação florestal monitorada" loading="lazy" onerror="this.onerror=null;this.src='assets/img/fallback-acao.svg';">
+          </div>
+          <div class="photo-caption">
+            <h3>Preservação de Áreas Verdes</h3>
+            <p>Monitoramento ecológico e trilhas educativas em parques e reservas ambientais.</p>
+          </div>
+        </article>
+
+        <article class="photo-tile" data-category="triagem" tabindex="0">
+          <div class="photo-wrap">
+            <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=900&q=85" alt="Voluntários organizando caixas com alimentos e doações para distribuição" loading="lazy" onerror="this.onerror=null;this.src='assets/img/fallback-acao.svg';">
+          </div>
+          <div class="photo-caption">
+            <h3>Mutirão de Triagem Solidária</h3>
+            <p>Separação e conferência de cestas básicas e kits de higiene para entrega imediata.</p>
+          </div>
+        </article>
+
+        <article class="photo-tile" data-category="capacitacao" tabindex="0">
+          <div class="photo-wrap">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=85" alt="Participantes em aula prática de inclusão digital utilizando computadores" loading="lazy" onerror="this.onerror=null;this.src='assets/img/fallback-acao.svg';">
+          </div>
+          <div class="photo-caption">
+            <h3>Oficina de Inclusão Digital</h3>
+            <p>Capacitação em tecnologia, produtividade e cidadania digital para jovens da comunidade.</p>
+          </div>
+        </article>
+
+        <article class="photo-tile" data-category="triagem" tabindex="0">
+          <div class="photo-wrap">
+            <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=900&q=85" alt="Ponto de coleta seletiva organizado para separação de materiais recicláveis" loading="lazy" onerror="this.onerror=null;this.src='assets/img/fallback-acao.svg';">
+          </div>
+          <div class="photo-caption">
+            <h3>Ponto de Coleta Comunitária</h3>
+            <p>Recebimento de papel, plástico, metal e eletrônicos em parceria com cooperativas.</p>
+          </div>
+        </article>
+
+        <article class="photo-tile" data-category="capacitacao" tabindex="0">
+          <div class="photo-wrap">
+            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=900&q=85" alt="Grupo de jovens e mentores colaborando em projeto educacional" loading="lazy" onerror="this.onerror=null;this.src='assets/img/fallback-acao.svg';">
+          </div>
+          <div class="photo-caption">
+            <h3>Mentoria e Empregabilidade</h3>
+            <p>Rodas de conversa, revisão de currículos e preparação para entrevistas de trabalho.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="gallery-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-photo-title">
+      <div class="modal-dialog">
+        <button type="button" class="modal-close" aria-label="Fechar ampliação">✕</button>
+        <img id="modal-photo-img" src="" alt="" style="width:100%; border-radius:10px; margin-bottom:16px; max-height:460px; object-fit:cover;">
+        <h3 id="modal-photo-title" class="section-title" style="font-size:1.3rem;"></h3>
+        <p id="modal-photo-desc" class="section-subtitle"></p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Fato <span>Social</span></div>
+        <p>Organização da Sociedade Civil dedicada à inclusão socioambiental, triagem solidária, capacitação tecnológica e transparência comunitária em São Paulo.</p>
+      </div>
+      <div>
+        <h3>Navegação</h3>
+        <ul>
+          <li><a href="sobre.html">Quem Somos</a></li>
+          <li><a href="projetos.html">Projetos Ativos</a></li>
+          <li><a href="impacto.html">Transparência e Impacto</a></li>
+          <li><a href="galeria.html">Galeria Fotográfica</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Comunidade</h3>
+        <ul>
+          <li><a href="noticias.html">Notícias e Editais</a></li>
+          <li><a href="midia.html#videos-youtube">Vídeos Integrados do YouTube</a></li>
+          <li><a href="midia.html#podcast-vozes">Podcast Vozes do Bairro</a></li>
+          <li><a href="contato.html">Voluntariado e Doações</a></li>
+          <li><a href="acessibilidade.html">Declaração WCAG 2.1 AA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contato &amp; Sede</h3>
+        <ul>
+          <li>Zona Leste / Tatuapé — São Paulo, SP</li>
+          <li>E-mail: contato@fatosocial.org.br</li>
+          <li>PIX Solidário: doacoes@fatosocial.org.br</li>
+          <li><a href="orcamento_hospedagem.html">Infraestrutura e Hospedagem</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Fato Social — Todos os direitos reservados.</span>
+      <span>Desenvolvido com HTML5 Semântico, CSS3, JavaScript e Acessibilidade WCAG 2.1 AA.</span>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/animacoes.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Estudo técnico e comparativo de custos de hospedagem, domínio e infraestrutura web para o portal da ONG Fato Social.">
+  <title>Orçamento de Hospedagem & Arquitetura Web | Fato Social</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animacoes.css">
+</head>
+<body>
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- Barra de Acessibilidade WCAG 2.1 AA -->
+  <div class="a11y-bar" role="region" aria-label="Barra de acessibilidade">
+    <div class="a11y-bar-inner">
+      <div class="a11y-shortcuts">
+        <a href="#conteudo-principal" accesskey="1">Conteúdo [1]</a>
+        <a href="#menu-principal" accesskey="2">Menu [2]</a>
+        <a href="acessibilidade.html">Acessibilidade WCAG 2.1 AA</a>
+      </div>
+      <div class="a11y-controls">
+        <button type="button" class="a11y-btn" data-action="font-dec" aria-label="Diminuir tamanho da fonte">A-</button>
+        <button type="button" class="a11y-btn" data-action="font-reset" aria-label="Restaurar tamanho padrão da fonte">A</button>
+        <button type="button" class="a11y-btn" data-action="font-inc" aria-label="Aumentar tamanho da fonte">A+</button>
+        <button type="button" class="a11y-btn" data-action="toggle-contrast" aria-pressed="false">Alto Contraste</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cabeçalho Principal -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Fato Social — Página Inicial">
+        <span class="brand-fato">Fato</span>&nbsp;<span class="brand-social">Social</span>
+      </a>
+
+      <button type="button" class="mobile-menu-btn" aria-expanded="false" aria-controls="menu-principal">
+        ☰ Menu
+      </button>
+
+      <nav id="menu-principal" class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="impacto.html">Impacto</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="midia.html">Mídia</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="acessibilidade.html">Acessibilidade</a></li>
+          <li><a href="orcamento_hospedagem.html" aria-current="page" class="active">Hospedagem</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" tabindex="-1">
+    <section class="hero-banner reveal">
+      <span class="hero-badge">Arquitetura &amp; Sustentabilidade Financeira</span>
+      <h1>Plano de Hospedagem e Infraestrutura Digital</h1>
+      <p>Comparativo técnico de soluções de publicação estática e em nuvem para manter o portal no ar com custo mínimo e alta disponibilidade.</p>
+    </section>
+
+    <section class="section-block reveal">
+      <div class="table-wrap" style="margin-bottom: 28px;">
+        <table>
+          <thead>
+            <tr>
+              <th>Modalidade de Hospedagem</th>
+              <th>Provedor Sugerido</th>
+              <th>Recursos Inclusos</th>
+              <th>Custo Mensal</th>
+              <th>Indicação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Hospedagem Estática Gratuita (CDN)</strong></td>
+              <td>GitHub Pages / Cloudflare Pages</td>
+              <td>HTTPS/SSL gratuito, CDN global, deploy contínuo via Git</td>
+              <td>R$ 0,00</td>
+              <td>Ideal para lançamento imediato</td>
+            </tr>
+            <tr>
+              <td><strong>Registro de Domínio Institucional</strong></td>
+              <td>Registro.br (.org.br)</td>
+              <td>Domínio oficial <code>fatosocial.org.br</code> + DNS gerenciado</td>
+              <td>R$ 3,33 (R$ 40/ano)</td>
+              <td>Identidade oficial da ONG</td>
+            </tr>
+            <tr>
+              <td><strong>Hospedagem Compartilhada + E-mail</strong></td>
+              <td>Hostinger / Locaweb (Plano ONG)</td>
+              <td>5 contas de e-mail institucional, 50 GB SSD, backup semanal</td>
+              <td>R$ 18,90</td>
+              <td>Gestão de e-mails corporativos</td>
+            </tr>
+            <tr>
+              <td><strong>Nuvem Escalável + Banco Gerenciado</strong></td>
+              <td>Render / Supabase / AWS Lightsail</td>
+              <td>API back-end, PostgreSQL gerenciado, monitoramento 24/7</td>
+              <td>R$ 49,00</td>
+              <td>Expansão futura com portal do aluno</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="form-panel">
+        <h2 class="section-title" style="font-size: 1.35rem; margin-bottom: 8px;">Simulador de Orçamento Anual de Infraestrutura</h2>
+        <p class="section-subtitle" style="margin-bottom: 16px;">Selecione o plano desejado e o período em meses para estimar o investimento total:</p>
+        <div class="grid-2">
+          <div class="form-group">
+            <label for="hosting-plan-select">Modalidade de Infraestrutura</label>
+            <select id="hosting-plan-select" class="form-control">
+              <option value="0">GitHub Pages / Cloudflare Pages (R$ 0,00/mês)</option>
+              <option value="3.33">GitHub Pages + Domínio .org.br (R$ 3,33/mês)</option>
+              <option value="18.90" selected>Hospedagem Completa + E-mails Institucionais (R$ 18,90/mês)</option>
+              <option value="49.00">Nuvem Escalável + Banco de Dados (R$ 49,00/mês)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="hosting-months">Período de Contratação (meses)</label>
+            <input type="number" id="hosting-months" class="form-control" value="12" min="1" max="60">
+          </div>
+        </div>
+        <div id="hosting-total-result" class="status-banner info" style="display:block;"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Fato <span>Social</span></div>
+        <p>Organização da Sociedade Civil dedicada à inclusão socioambiental, triagem solidária, capacitação tecnológica e transparência comunitária em São Paulo.</p>
+      </div>
+      <div>
+        <h3>Navegação</h3>
+        <ul>
+          <li><a href="sobre.html">Quem Somos</a></li>
+          <li><a href="projetos.html">Projetos Ativos</a></li>
+          <li><a href="impacto.html">Transparência e Impacto</a></li>
+          <li><a href="galeria.html">Galeria Fotográfica</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Comunidade</h3>
+        <ul>
+          <li><a href="noticias.html">Notícias e Editais</a></li>
+          <li><a href="midia.html#videos-youtube">Vídeos Integrados do YouTube</a></li>
+          <li><a href="midia.html#podcast-vozes">Podcast Vozes do Bairro</a></li>
+          <li><a href="contato.html">Voluntariado e Doações</a></li>
+          <li><a href="acessibilidade.html">Declaração WCAG 2.1 AA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contato &amp; Sede</h3>
+        <ul>
+          <li>Zona Leste / Tatuapé — São Paulo, SP</li>
+          <li>E-mail: contato@fatosocial.org.br</li>
+          <li>PIX Solidário: doacoes@fatosocial.org.br</li>
+          <li><a href="orcamento_hospedagem.html">Infraestrutura e Hospedagem</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Fato Social — Todos os direitos reservados.</span>
+      <span>Desenvolvido com HTML5 Semântico, CSS3, JavaScript e Acessibilidade WCAG 2.1 AA.</span>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/animacoes.js"></script>
+</body>
+</html>

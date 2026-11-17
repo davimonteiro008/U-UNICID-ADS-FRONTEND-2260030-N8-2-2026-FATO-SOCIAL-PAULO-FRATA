@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Acompanhe as últimas notícias, editais de oficinas gratuitas, resultados de mutirões e parcerias da Fato Social.">
+  <title>Notícias & Editais — Atualizações da Comunidade | Fato Social</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animacoes.css">
+</head>
+<body>
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- Barra de Acessibilidade WCAG 2.1 AA -->
+  <div class="a11y-bar" role="region" aria-label="Barra de acessibilidade">
+    <div class="a11y-bar-inner">
+      <div class="a11y-shortcuts">
+        <a href="#conteudo-principal" accesskey="1">Conteúdo [1]</a>
+        <a href="#menu-principal" accesskey="2">Menu [2]</a>
+        <a href="acessibilidade.html">Acessibilidade WCAG 2.1 AA</a>
+      </div>
+      <div class="a11y-controls">
+        <button type="button" class="a11y-btn" data-action="font-dec" aria-label="Diminuir tamanho da fonte">A-</button>
+        <button type="button" class="a11y-btn" data-action="font-reset" aria-label="Restaurar tamanho padrão da fonte">A</button>
+        <button type="button" class="a11y-btn" data-action="font-inc" aria-label="Aumentar tamanho da fonte">A+</button>
+        <button type="button" class="a11y-btn" data-action="toggle-contrast" aria-pressed="false">Alto Contraste</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cabeçalho Principal -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Fato Social — Página Inicial">
+        <span class="brand-fato">Fato</span>&nbsp;<span class="brand-social">Social</span>
+      </a>
+
+      <button type="button" class="mobile-menu-btn" aria-expanded="false" aria-controls="menu-principal">
+        ☰ Menu
+      </button>
+
+      <nav id="menu-principal" class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="impacto.html">Impacto</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="noticias.html" aria-current="page" class="active">Notícias</a></li>
+          <li><a href="midia.html">Mídia</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="acessibilidade.html">Acessibilidade</a></li>
+          <li><a href="orcamento_hospedagem.html">Hospedagem</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" tabindex="-1">
+    <section class="hero-banner reveal">
+      <span class="hero-badge">Jornalismo Comunitário &amp; Editais</span>
+      <h1>Notícias, Conquistas e Convocatórias</h1>
+      <p>Fique por dentro das próximas datas de mutirões, abertura de vagas em cursos gratuitos e relatórios de impacto.</p>
+    </section>
+
+    <div class="section-header reveal">
+      <div class="filter-bar" style="margin-bottom:0;" role="group" aria-label="Filtrar notícias">
+        <button type="button" class="filter-pill active" data-news-filter="todas">Todas</button>
+        <button type="button" class="filter-pill" data-news-filter="mutiroes">Mutirões</button>
+        <button type="button" class="filter-pill" data-news-filter="educacao">Capacitação</button>
+        <button type="button" class="filter-pill" data-news-filter="sustentabilidade">Sustentabilidade</button>
+      </div>
+      <div style="min-width: 260px;">
+        <label for="news-search" class="skip-link">Buscar notícia</label>
+        <input type="search" id="news-search" class="form-control" placeholder="Buscar por palavra-chave...">
+      </div>
+    </div>
+
+    <section class="section-block reveal">
+      <div class="grid-3">
+        <article class="card" data-news-category="mutiroes">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=900&q=85" alt="Voluntários organizando doações no mutirão de novembro" loading="lazy" onerror="this.onerror=null;this.src='assets/img/fallback-acao.svg';">
+            <span class="card-tag">Mutirões</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">14 de Novembro de 2026 • 3 min de leitura</div>
+            <h3 class="card-title">Mutirão Comunitário Arrecada 3,2 Toneladas de Alimentos e Agasalhos</h3>
+            <p class="card-text">Mais de 90 voluntários participaram da triagem e catalogação digital dos donativos destinados a 420 famílias da Zona Leste.</p>
+            <button type="button" class="btn btn-forest" data-open-news data-full-text="No último sábado, mais de 90 voluntários reuniram-se na sede da Fato Social para realizar o maior mutirão de triagem do semestre. Ao todo, foram catalogadas 3,2 toneladas de alimentos não perecíveis, itens de higiene e roupas de inverno, beneficiando diretamente 420 famílias previamente cadastradas com acompanhamento social contínuo.">Ler Notícia Completa</button>
+          </div>
+        </article>
+
+        <article class="card" data-news-category="educacao">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=85" alt="Alunos participando da turma de lógica de programação e web" loading="lazy" onerror="this.onerror=null;this.src='assets/img/fallback-acao.svg';">
+            <span class="card-tag">Capacitação</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">08 de Novembro de 2026 • 4 min de leitura</div>
+            <h3 class="card-title">Abertas 80 Novas Vagas para o Curso Gratuito de Introdução à Programação Web</h3>
+            <p class="card-text">Formação prática em HTML5, CSS3, acessibilidade digital e lógica de programação com certificado e mentoria profissional.</p>
+            <button type="button" class="btn btn-forest" data-open-news data-full-text="Estão abertas as inscrições para a nova turma do programa Jovem Tech Comunitário. Serão 80 vagas gratuitas divididas nos turnos da manhã e da tarde, com foco em desenvolvimento web acessível, uso ético de inteligência artificial e preparação para processos seletivos de estágio e jovem aprendiz.">Ler Notícia Completa</button>
+          </div>
+        </article>
+
+        <article class="card" data-news-category="sustentabilidade">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1592419044706-39796d40f98c?auto=format&fit=crop&w=900&q=85" alt="Colheita de hortaliças orgânicas na horta comunitária" loading="lazy" onerror="this.onerror=null;this.src='assets/img/fallback-acao.svg';">
+            <span class="card-tag">Sustentabilidade</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">01 de Novembro de 2026 • 3 min de leitura</div>
+            <h3 class="card-title">Horta Urbana Comunitária Atinge Marca de 1.500 Mudas Distribuídas</h3>
+            <p class="card-text">Iniciativa integra compostagem de resíduos orgânicos dos pontos de coleta com educação alimentar nas escolas locais.</p>
+            <button type="button" class="btn btn-forest" data-open-news data-full-text="A horta comunitária mantida pelos voluntários da Fato Social alcançou a marca histórica de 1.500 mudas de hortaliças e plantas medicinais distribuídas gratuitamente. O adubo utilizado é produzido integralmente a partir da compostagem dos resíduos orgânicos coletados nos ecopontos parceiros.">Ler Notícia Completa</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Modal de Leitura de Notícia -->
+    <div id="news-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="news-modal-title">
+      <div class="modal-dialog">
+        <button type="button" class="modal-close" aria-label="Fechar notícia">✕</button>
+        <img id="news-modal-img" src="" alt="" style="width:100%; border-radius:10px; margin-bottom:14px; max-height:340px; object-fit:cover;">
+        <div id="news-modal-meta" class="card-meta"></div>
+        <h3 id="news-modal-title" class="section-title" style="font-size:1.4rem; margin-bottom:12px;"></h3>
+        <p id="news-modal-body" style="color:var(--text-primary); line-height:1.75;"></p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Fato <span>Social</span></div>
+        <p>Organização da Sociedade Civil dedicada à inclusão socioambiental, triagem solidária, capacitação tecnológica e transparência comunitária em São Paulo.</p>
+      </div>
+      <div>
+        <h3>Navegação</h3>
+        <ul>
+          <li><a href="sobre.html">Quem Somos</a></li>
+          <li><a href="projetos.html">Projetos Ativos</a></li>
+          <li><a href="impacto.html">Transparência e Impacto</a></li>
+          <li><a href="galeria.html">Galeria Fotográfica</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Comunidade</h3>
+        <ul>
+          <li><a href="noticias.html">Notícias e Editais</a></li>
+          <li><a href="midia.html#videos-youtube">Vídeos Integrados do YouTube</a></li>
+          <li><a href="midia.html#podcast-vozes">Podcast Vozes do Bairro</a></li>
+          <li><a href="contato.html">Voluntariado e Doações</a></li>
+          <li><a href="acessibilidade.html">Declaração WCAG 2.1 AA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contato &amp; Sede</h3>
+        <ul>
+          <li>Zona Leste / Tatuapé — São Paulo, SP</li>
+          <li>E-mail: contato@fatosocial.org.br</li>
+          <li>PIX Solidário: doacoes@fatosocial.org.br</li>
+          <li><a href="orcamento_hospedagem.html">Infraestrutura e Hospedagem</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Fato Social — Todos os direitos reservados.</span>
+      <span>Desenvolvido com HTML5 Semântico, CSS3, JavaScript e Acessibilidade WCAG 2.1 AA.</span>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/animacoes.js"></script>
+</body>
+</html>
